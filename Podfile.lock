@@ -1,0 +1,32 @@
+PODS:
+  - FSCalendar (2.7.9)
+  - PageMenu (1.3.0)
+  - SideMenuSwift (1.0.0)
+
+DEPENDENCIES:
+  - FSCalendar
+  - PageMenu (from `https://github.com/orazz/PageMenu.git`)
+  - SideMenuSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FSCalendar
+    - SideMenuSwift
+
+EXTERNAL SOURCES:
+  PageMenu:
+    :git: https://github.com/orazz/PageMenu.git
+
+CHECKOUT OPTIONS:
+  PageMenu:
+    :commit: 2c9e8808eed960e6520e4213a3b1a332afb6cbb1
+    :git: https://github.com/orazz/PageMenu.git
+
+SPEC CHECKSUMS:
+  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
+  PageMenu: b132da9e56950f0720b8f1c7d9d731f635ebcdcb
+  SideMenuSwift: f8567754feb36ade13ffd613f608829f4b86d4b3
+
+PODFILE CHECKSUM: e2b5457097133dffc19df75eaa6cbdecb65aa900
+
+COCOAPODS: 1.5.3
