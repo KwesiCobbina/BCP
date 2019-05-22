@@ -22,25 +22,34 @@ class HomeViewController: UIViewController {
 		var controllerArray : [UIViewController] = []
 		
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		let viewController1: LegislativeViewController = storyboard.instantiateViewController(withIdentifier: "LegislativeViewController") as! LegislativeViewController
-		viewController1.title = "Legislative Instruments"
-		let viewController2: RegulationsViewController = storyboard.instantiateViewController(withIdentifier: "vc2") as! RegulationsViewController
-		viewController2.title = "Regulations & Policies"
-		let viewController3: AdministrativeViewController = storyboard.instantiateViewController(withIdentifier: "vc1") as! AdministrativeViewController
-		viewController3.title = "Administrative Directives"
+		let viewController1: GeneralViewController = storyboard.instantiateViewController(withIdentifier: "GeneralViewController") as! GeneralViewController
+		viewController1.title = "General"
+		let viewController2: PoliciesViewController = storyboard.instantiateViewController(withIdentifier: "PoliciesViewController") as! PoliciesViewController
+		viewController2.title = "Policies"
+		let viewController3: RegulationsViewController = storyboard.instantiateViewController(withIdentifier: "vc2") as! RegulationsViewController
+		viewController3.title = "Regulations"
+		let viewController4: AdministrativeViewController = storyboard.instantiateViewController(withIdentifier: "vc1") as! AdministrativeViewController
+		viewController4.title = "Administrative Directives"
+		let viewController5: LegislativeViewController = storyboard.instantiateViewController(withIdentifier: "LegislativeViewController") as! LegislativeViewController
+		viewController5.title = "Legislative Instruments"
+		let viewController6: ByLawsViewController = storyboard.instantiateViewController(withIdentifier: "ByLawsViewController") as! ByLawsViewController
+		viewController6.title = "By Laws"
 
 		controllerArray.append(viewController1)
 		controllerArray.append(viewController2)
 		controllerArray.append(viewController3)
+		controllerArray.append(viewController4)
+		controllerArray.append(viewController5)
+		controllerArray.append(viewController6)
 		
 		let parameters: [CAPSPageMenuOption] = [
 			.scrollMenuBackgroundColor(UIColor(red: 255/255.0, green: 0/255.0, blue: 0/255.0, alpha: 0.70)),
 			.viewBackgroundColor(UIColor.white),
 			.selectionIndicatorColor(UIColor.yellow),
 			.bottomMenuHairlineColor(UIColor(red: 70.0/255.0, green: 70.0/255.0, blue: 80.0/255.0, alpha: 1.0)),
-			.menuItemFont(UIFont(name: "HelveticaNeue", size: 10.0)!),
+			.menuItemFont(UIFont(name: "HelveticaNeue", size: 13.0)!),
 			.menuHeight(50.0),
-			.menuItemWidth(self.view.frame.width / 3 - 15),
+			.menuItemWidth(self.view.frame.width / 2 - 15),
 			.centerMenuItems(true)
 		]
 		

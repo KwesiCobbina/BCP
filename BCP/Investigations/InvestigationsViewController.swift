@@ -22,7 +22,7 @@ class InvestigationsViewController: UIViewController {
 		let viewController1: ComplaintViewController = storyboard.instantiateViewController(withIdentifier: "ComplaintViewController") as! ComplaintViewController
 		viewController1.title = "Submit Your Complaint"
 		
-		let viewController2: UConsultationsViewController = storyboard.instantiateViewController(withIdentifier: "UConsultationsViewController") as! UConsultationsViewController
+		let viewController2: ResponsesViewController = storyboard.instantiateViewController(withIdentifier: "ResponsesViewController") as! ResponsesViewController
 		viewController2.title = "View your Complaints"
 		
 		controllerArray.append(viewController1)
