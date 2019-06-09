@@ -122,12 +122,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BCP/Account/InterestsEditViewController.swift"
-            timestampString = "579718800.786544"
+            timestampString = "581770294.249568"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "fetchAllInterests()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -138,12 +138,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BCP/Account/InterestsEditViewController.swift"
-            timestampString = "579718800.786669"
+            timestampString = "581770294.2500449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "fetchAllInterests()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -154,12 +154,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BCP/Account/InterestsEditViewController.swift"
-            timestampString = "579718800.786727"
+            timestampString = "581770294.250267"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "fetchAllInterests()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -170,12 +170,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BCP/Account/InterestsEditViewController.swift"
-            timestampString = "579718800.786779"
+            timestampString = "581770294.250478"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "fetchAllInterests()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -186,12 +186,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BCP/Account/InterestsEditViewController.swift"
-            timestampString = "579718800.786829"
+            timestampString = "581770294.250684"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "fetchAllInterests()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -202,12 +202,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BCP/Account/InterestsEditViewController.swift"
-            timestampString = "579718800.786877"
+            timestampString = "581770294.250888"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "fetchAllInterests()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -218,12 +218,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BCP/Account/InterestsEditViewController.swift"
-            timestampString = "579718800.786927"
+            timestampString = "581770294.251092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "fetchAllInterests()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -234,12 +234,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BCP/Account/InterestsEditViewController.swift"
-            timestampString = "579718800.786974"
+            timestampString = "581770294.251295"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "fetchAllInterests()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -250,12 +250,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BCP/Account/InterestsEditViewController.swift"
-            timestampString = "579718800.7870229"
+            timestampString = "581770294.2515"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "fetchAllInterests()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -266,12 +266,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BCP/Account/InterestsEditViewController.swift"
-            timestampString = "579718800.787084"
+            timestampString = "581770294.251706"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "fetchAllInterests()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -279,256 +279,32 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BCP/Account/InterestsEditViewController.swift"
-            timestampString = "579718800.787133"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BCP/Account/InterestsEditViewController.swift"
-            timestampString = "579718800.787182"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BCP/Others/LoginViewController.swift"
-            timestampString = "580078148.623723"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "signInClicked(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BCP.LoginViewController.signInClicked(__C.UIButton) -&gt; ()"
-                  moduleName = "BCP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kwesicobbina/Desktop/BCP%20copy/BCP/Others/LoginViewController.swift"
-                  timestampString = "580158823.60253"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "5820">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BCP.LoginViewController.signInClicked(__C.UIButton) -&gt; ()"
-                  moduleName = "BCP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kwesicobbina/Desktop/BCP%20copy/BCP/Others/LoginViewController.swift"
-                  timestampString = "580158823.6053849"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "52">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BCP/Others/LoginViewController.swift"
-            timestampString = "580078148.623782"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "signInClicked(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BCP/Others/LoginViewController.swift"
-            timestampString = "580078148.623832"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "signInClicked(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BCP/Others/LoginViewController.swift"
-            timestampString = "580078148.623881"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "signInClicked(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BCP/Others/LoginViewController.swift"
-            timestampString = "580078148.623929"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "signInClicked(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BCP/Read/MoreOnPolicyViewController.swift"
-            timestampString = "580215908.799414"
+            timestampString = "581776446.0850151"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "downloadNewDoc(fin:cell:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BCP/Read/MoreOnPolicyViewController.swift"
+            timestampString = "581776446.085399"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "237"
             endingLineNumber = "237"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BCP/Read/MoreOnPolicyViewController.swift"
-            timestampString = "580215908.799834"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BCP/Read/MoreOnPolicyViewController.swift"
-            timestampString = "580215908.800097"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BCP/Read/MoreOnPolicyViewController.swift"
-            timestampString = "580215908.800344"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BCP.MoreOnPolicyViewController.(downloadNewDoc in _EC99094262CF95A38DB88E8E5BA7E9C9)(fin: __C.NSURL) -&gt; ()"
-                  moduleName = "BCP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kwesicobbina/Desktop/BCP%20copy/BCP/Read/MoreOnPolicyViewController.swift"
-                  timestampString = "580158261.246515"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "172"
-                  endingLineNumber = "172"
-                  offsetFromSymbolStart = "3148">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (__C.NSProgress) -&gt; () in BCP.MoreOnPolicyViewController.(downloadNewDoc in _EC99094262CF95A38DB88E8E5BA7E9C9)(fin: __C.NSURL) -&gt; ()"
-                  moduleName = "BCP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kwesicobbina/Desktop/BCP%20copy/BCP/Read/MoreOnPolicyViewController.swift"
-                  timestampString = "580158261.248608"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "173"
-                  endingLineNumber = "173"
-                  offsetFromSymbolStart = "160">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BCP/Read/MoreOnPolicyViewController.swift"
-            timestampString = "580215908.80059"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "283"
-            endingLineNumber = "283"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "downloadNewDoc(fin:cell:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -538,92 +314,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BCP/Read/MoreOnPolicyViewController.swift"
-            timestampString = "580215908.800833"
+            timestampString = "581776446.085658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "291"
-            endingLineNumber = "291"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BCP.MoreOnPolicyViewController.(downloadNewDoc in _EC99094262CF95A38DB88E8E5BA7E9C9)(fin: __C.NSURL) -&gt; ()"
-                  moduleName = "BCP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kwesicobbina/Desktop/BCP%20copy/BCP/Read/MoreOnPolicyViewController.swift"
-                  timestampString = "580158823.633532"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "193"
-                  endingLineNumber = "193"
-                  offsetFromSymbolStart = "3060">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (__C.NSProgress) -&gt; () in BCP.MoreOnPolicyViewController.(downloadNewDoc in _EC99094262CF95A38DB88E8E5BA7E9C9)(fin: __C.NSURL) -&gt; ()"
-                  moduleName = "BCP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kwesicobbina/Desktop/BCP%20copy/BCP/Read/MoreOnPolicyViewController.swift"
-                  timestampString = "580158823.63618"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "193"
-                  endingLineNumber = "193"
-                  offsetFromSymbolStart = "820">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (Alamofire.DownloadResponse&lt;Swift.Optional&lt;Foundation.URL&gt;&gt;) -&gt; () in BCP.MoreOnPolicyViewController.(downloadNewDoc in _EC99094262CF95A38DB88E8E5BA7E9C9)(fin: __C.NSURL) -&gt; ()"
-                  moduleName = "BCP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kwesicobbina/Desktop/BCP%20copy/BCP/Read/MoreOnPolicyViewController.swift"
-                  timestampString = "580158823.63875"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "194"
-                  endingLineNumber = "194"
-                  offsetFromSymbolStart = "272">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BCP/Read/MoreOnPolicyViewController.swift"
-            timestampString = "580215908.801073"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "299"
-            endingLineNumber = "299"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BCP/Read/MoreOnPolicyViewController.swift"
-            timestampString = "580215908.8013149"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "311"
-            endingLineNumber = "311"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "238"
+            endingLineNumber = "238"
+            landmarkName = "downloadNewDoc(fin:cell:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -633,13 +330,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BCP/Read/MoreOnPolicyViewController.swift"
-            timestampString = "580215908.8016011"
+            timestampString = "581776446.085888"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "313"
-            endingLineNumber = "313"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "239"
+            endingLineNumber = "239"
+            landmarkName = "downloadNewDoc(fin:cell:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -649,13 +346,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BCP/Read/MoreOnPolicyViewController.swift"
-            timestampString = "580215908.801904"
+            timestampString = "581776446.086121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "292"
-            endingLineNumber = "292"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "downloadNewDoc(fin:cell:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BCP/Read/MoreOnPolicyViewController.swift"
+            timestampString = "581776446.086358"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
+            landmarkName = "downloadNewDoc(fin:cell:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
