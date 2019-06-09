@@ -19,11 +19,10 @@ class BasicTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-	func setPost(post: BasicPost) {
-		daysLeftLabel.text = post.daysLeft
-		organisationNameLabel.text = post.organisationName
-		postTitleLabel.text = post.postTitle
-		postDetailsTextView.text = post.postDetails
+	func setPost(post: Read) {
+		organisationNameLabel.text = post.interest_name
+		postTitleLabel.text = post.policy_title
+//		postDetailsTextView.text = post.postDetails
 	}
 
 	@IBAction func likeButtonClicked(_ sender: UIButton) {

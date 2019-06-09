@@ -11,37 +11,72 @@ import UIKit
 class RegulationsViewController: UIViewController {
 
 	@IBOutlet weak var tableView2: UITableView!
-	var policyPosts: [BasicPost] = []
+	@IBOutlet weak var appIcon: UIImageView!
+	@IBOutlet weak var noDataLabel: UILabel!
+	var policyPosts: [Read] = []
 	override func viewDidLoad() {
         super.viewDidLoad()
 
 		
 		tableView2.delegate = self
 		tableView2.dataSource = self
-		policyPosts = createArray()
 		
     }
-	
-	func createArray() -> [BasicPost] {
-		var tempPosts: [BasicPost] = []
-		
-		let post1 = BasicPost(daysLeft: "1 day Left", postTitle: "IEEE 5th Congregation", organisationName: "Ghana Institute Of Management And Public Administration", postDetails: "IEEE GreenTech was conceived to address this pressing challenge: How do we provide the reliable energy demanded by an environmentally sensitive world using energy resources in a sustainable and environmentally responsible manner?")
-		
-		let post2 = BasicPost(daysLeft: "1 day Left", postTitle: "WiTE", organisationName: "Women In Technology and Engineering", postDetails: "IEEE GreenTech was conceived to address this pressing challenge: How do we provide the reliable energy demanded by an environmentally sensitive world using energy resources in a sustainable and environmentally responsible manner?")
-		
-		/*let post3 = BasicPost(daysLeft: "30 days Left", postTitle: "IEEE 25th Congregation", organisationName: "Ghana Institute Of Management And Public Administration", postDetails: "IEEE GreenTech was conceived to address this pressing challenge: How do we provide the reliable energy demanded by an environmentally sensitive world using energy resources in a sustainable and environmentally responsible manner?")
-		
-		let post4 = BasicPost(daysLeft: "50 days Left", postTitle: "IEEE Conference 2018", organisationName: "Ghana Institute Of Management And Public Administration", postDetails: "IEEE GreenTech was conceived to address this pressing challenge: How do we provide the reliable energy demanded by an environmentally sensitive world using energy resources in a sustainable and environmentally responsible manner?")
-		*/
-		
-		tempPosts.append(post1)
-		tempPosts.append(post2)
-//		tempPosts.append(post3)
-//		tempPosts.append(post4)
-		
-		return tempPosts
+	override func viewWillAppear(_ animated: Bool) {
+		fetchRegulations()
 	}
-
+	
+	func checkDatas() {
+		if policyPosts.isEmpty {
+			tableView2.isHidden = true
+			noDataLabel.isHidden = false
+			appIcon.isHidden = false
+			
+		}
+		else {
+			tableView2.isHidden = false
+			noDataLabel.isHidden = true
+			appIcon.isHidden = true
+		}
+	}
+	
+	func fetchRegulations() {
+		var tempAdminis: [Read] = []
+		let menu_id = "3"
+		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_read_menu_details.php")
+		var request = URLRequest(url: url!)
+		request.httpMethod = "POST"
+		
+		
+		let params = "menu_id=\(menu_id)"
+		request.httpBody = params.data(using: String.Encoding.utf8)
+		let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+			guard let dataResponse = data,
+				error == nil else {
+					print(error?.localizedDescription ?? "Response Error")
+					return }
+			do{
+				
+				let countries = try JSONDecoder().decode([Read].self, from: dataResponse)
+				
+				for data in countries {
+					tempAdminis.append(data)
+					print(data)
+				}
+				self.policyPosts = []
+				self.policyPosts = tempAdminis
+				
+				
+				
+			} catch let parsingError {
+				print("Error", parsingError)
+			}
+			DispatchQueue.main.async {
+				self.tableView2.reloadData()
+			}
+		}
+		task.resume()
+	}
 	
 
 }
@@ -50,7 +85,7 @@ class RegulationsViewController: UIViewController {
 extension RegulationsViewController: UITableViewDataSource, UITableViewDelegate {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let post = policyPosts[indexPath.row]
-		let cell = tableView.dequeueReusableCell(withIdentifier: "PoliciesCell") as! BasicTableViewCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell") as! BasicTableViewCell
 		cell.setPost(post: post)
 		
 		return cell
@@ -58,6 +93,16 @@ extension RegulationsViewController: UITableViewDataSource, UITableViewDelegate 
 	
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		checkDatas()
 		return policyPosts.count
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "regulationsToMore" {
+			let indexPaths=self.tableView2!.indexPathsForSelectedRows!
+			let indexPath = indexPaths[0] as NSIndexPath
+			let vc = segue.destination as? MoreOnPolicyViewController
+			vc?.policy_id = self.policyPosts[indexPath.row].policy_id!
+		}
 	}
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Locksmith
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+		
+		if Locksmith.loadDataForUserAccount(userAccount: "userAccount") != nil {
+			let mainStoryboard = UIStoryboard(name: "Main" , bundle: nil)
+			let viewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeTabView") as! UITabBarController
+			viewController.selectedIndex = 3
+			window!.rootViewController = viewController
+			window!.makeKeyAndVisible()
+			
+		}
+		else {
+			
+		}
 		return true
 	}
 	

@@ -13,6 +13,9 @@ class ActualHomeViewController: UIViewController {
 	@IBOutlet weak var homeSliderView: UIView!
 	@IBOutlet weak var homePageControl: UIPageControl!
 	@IBOutlet weak var homeTableView: UITableView!
+	@IBOutlet weak var messageLabel: UILabel!
+	@IBOutlet weak var tableBox: UIView!
+	
 	var posts: [HomePost] = []
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +25,10 @@ class ActualHomeViewController: UIViewController {
 		posts = createArray()
 
     }
+	
+	func fetchLatestPost() {
+		
+	}
     
 
 	func createArray() -> [HomePost] {
@@ -45,6 +52,7 @@ class ActualHomeViewController: UIViewController {
 		
 		return tempPosts
 	}
+	
 	
 
 }

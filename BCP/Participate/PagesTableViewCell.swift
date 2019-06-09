@@ -8,8 +8,19 @@
 
 import UIKit
 
+
+protocol PagesTableViewCellDelegate {
+	
+//	func didTapAdd(for post: PagesTableViewCell)
+	func didTapAdd(post: PagesTableViewCell)
+	
+}
+
+
 class PagesTableViewCell: UITableViewCell {
 
+	var delegate: PagesTableViewCellDelegate?
+	var consultation: Consultations?
 	
 	@IBOutlet weak var durationLabel: UILabel!
 	@IBOutlet weak var titleLabel: UILabel!
@@ -21,16 +32,20 @@ class PagesTableViewCell: UITableViewCell {
         // Initialization code
     }
 	
-	func setData(post: PagesData) {
-		daysLaefLabel.text = post.daysLeft
-		institutionNameLabel.text = post.organisationName
-		titleLabel.text = post.postTitle
-		postDetailsLabel.text = post.postDetails
-		durationLabel.text = post.postDuration
+	func setData(post: Consultations) {
+		daysLaefLabel.text = post.period!
+		institutionNameLabel.text = post.institution!
+		titleLabel.text = post.topic!
+		postDetailsLabel.text = post.description!
+		durationLabel.text = post.start_date! + " - " + post.end_date!
 	}
 	
 	
+	
 	@IBAction func AddButtonClicked(_ sender: UIButton) {
+		
+		delegate?.didTapAdd(post: self)
+//		print(consultation?.consultation_id)
 	}
 	
 }

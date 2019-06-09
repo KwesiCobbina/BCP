@@ -10,61 +10,92 @@ import UIKit
 
 class MoreDetailsViewController: UIViewController {
 
-	@IBOutlet weak var scrollView: UIScrollView!
-	@IBOutlet weak var contentView:UIView!
-	@IBOutlet weak var detailsLabel: UILabel!
+
 	@IBOutlet weak var detailsInfoLabel: UILabel!
-	@IBOutlet weak var datesView1: UILabel!
-	@IBOutlet weak var datesView2: UILabel!
-	@IBOutlet weak var datesView3: UILabel!
-	@IBOutlet weak var datesView4: UILabel!
-	@IBOutlet weak var timeView1: UILabel!
-	@IBOutlet weak var timeView2: UILabel!
-	@IBOutlet weak var timeView3: UILabel!
-	@IBOutlet weak var timeView4: UILabel!
-	@IBOutlet weak var ycLabel: UILabel!
-	@IBOutlet weak var ycInfoLabel: UILabel!
-	@IBOutlet weak var ft1: UITextField!
-	@IBOutlet weak var tf2: UITextField!
-	@IBOutlet weak var sexLabel: UILabel!
-	@IBOutlet weak var sexSegControl: UISegmentedControl!
-	@IBOutlet weak var tf3: UITextField!
-	@IBOutlet weak var tf4: UITextField!
-	@IBOutlet weak var tf5: UITextField!
-	@IBOutlet weak var tf6: UITextField!
-	@IBOutlet weak var tf7: UITextField!
-	@IBOutlet weak var tf9: UITextField!
-	@IBOutlet weak var confLabel: UILabel!
-	@IBOutlet weak var confSegControl: UISegmentedControl!
+	@IBOutlet weak var topicLabel: UILabel!
+	@IBOutlet weak var institutionLabel: UILabel!
+	@IBOutlet weak var startDate: UILabel!
+	@IBOutlet weak var postDate: UILabel!
+	@IBOutlet weak var dulationLabel: UILabel!
+	@IBOutlet weak var daysLeftLabel: UILabel!
 	@IBOutlet weak var submitButton: UIButton!
 	@IBOutlet weak var shareButton: UIButton!
 	@IBOutlet weak var dismissButton: UIButton!
+	@IBOutlet weak var commentTextBox: UITextView!
 	
 	
 	var topicTitle: String?
 	var institutionName: String?
 	var daysLeft: String?
 	var details: String?
+	var postedDate: String?
+	var srtDate: String?
+	var duration: String?
+	
 	var t: Bool?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+		
+		if t == true {
+			dismissButton.isHidden = true
+		}
 	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		topicLabel.text = topicTitle
+		institutionLabel.text = institutionName
+		dulationLabel.text = daysLeft
+		daysLeftLabel.text = daysLeft
+		detailsInfoLabel.text = details
+		startDate.text = srtDate
+		dulationLabel.text = duration
+		let dateString = postedDate
+		
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+		let dateFromString = dateFormatter.date(from: dateString!)
+		let dateFormatter2 = DateFormatter()
+		dateFormatter2.dateFormat = "MMMM dd, yyyy"
+		let stringFromDate = dateFormatter2.string(from: dateFromString!)
+		postDate.text = stringFromDate
+	}
+	
 	@IBAction func submitClicked(_ sender: UIButton) {
+		if commentTextBox.text != "" || commentTextBox.text != "Enter Comment Here" {
+			
+		}
+		
 	}
+	
 	@IBAction func dismissVIew(_ sender: UIButton) {
 		self.dismiss(animated: true, completion: nil)
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
-		dismissButton.isHidden = t ?? false
+		dismissButton.isHidden = t ?? true
 	}
 	
+	override func viewWillDisappear(_ animated: Bool) {
+		dismissButton.isHidden = true
+	}
 }
+
 
 extension MoreDetailsViewController: UIScrollViewDelegate {
 }
 
 
+
+
+extension UILabel {
+	
+	func retrieveTextHeight () -> CGFloat {
+		let attributedText = NSAttributedString(string: self.text!, attributes: [NSAttributedString.Key.font:self.font])
+		
+		let rect = attributedText.boundingRect(with: CGSize(width: self.frame.size.width, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, context: nil)
+		
+		return ceil(rect.size.height)
+	}
+	
+}

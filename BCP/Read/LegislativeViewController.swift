@@ -11,38 +11,70 @@ import UIKit
 class LegislativeViewController: UIViewController {
 
 	@IBOutlet weak var homeTableView: UITableView!
-	var posts: [BasicPost] = []
+	@IBOutlet weak var appIcon: UIImageView!
+	@IBOutlet weak var noDataLabel: UILabel!
+	var posts: [Read] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
 		homeTableView.delegate = self
 		homeTableView.dataSource = self
-		posts = createArray()
+//		posts = createArray()
 //		homeTableView.rowHeight = 160
         // Do any additional setup after loading the view.
+		fetchLegisilative()
     }
-    
+	
+	func checkDatas() {
+		if posts.isEmpty {
+			homeTableView.isHidden = true
+			noDataLabel.isHidden = false
+			appIcon.isHidden = false
+			
+		}
+		else {
+			homeTableView.isHidden = false
+			noDataLabel.isHidden = true
+			appIcon.isHidden = true
+		}
+	}
+	
+	func fetchLegisilative() {
+		var tempInterests: [Read] = []
+		let menu_id = "5"
+		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_read_menu_details.php")
+		var request = URLRequest(url: url!)
+		request.httpMethod = "POST"
 
-	func createArray() -> [BasicPost] {
-		var tempPosts: [BasicPost] = []
-		
-		let post1 = BasicPost(daysLeft: "5 days Left", postTitle: "IEEE 5th Congregation", organisationName: "Ghana Institute Of Management And Public Administration", postDetails: "IEEE GreenTech was conceived to address this pressing challenge: How do we provide the reliable energy demanded by an environmentally sensitive world using energy resources in a sustainable and environmentally responsible manner?IEEE GreenTech was conceived to address this pressing challenge: How do we provide the reliable energy demanded by an environmentally sensitive world using energy resources in a sustainable and environmentally responsible manner?IEEE GreenTech was conceived to address this pressing challenge: How do we provide the reliable energy demanded by an environmentally sensitive world using energy resources in a sustainable and environmentally responsible manner?")
-		
-		let post2 = BasicPost(daysLeft: "1 day Left", postTitle: "WiTE", organisationName: "Women In Technology and Engineering", postDetails: "IEEE GreenTech was conceived to address this pressing challenge")
-		
-		let post3 = BasicPost(daysLeft: "6 days Left", postTitle: "IEEE 25th Congregation", organisationName: "Ghana Institute Of Management And Public Administration", postDetails: "IEEE GreenTech was conceived to address this pressing challenge: How do we provide the reliable energy demanded by an environmentally sensitive world using energy resources in a sustainable and environmentally responsible manner?")
-		
-		let post4 = BasicPost(daysLeft: "15 days Left", postTitle: "IEEE Conference 2018", organisationName: "Ghana Institute Of Management And Public Administration", postDetails: "IEEE GreenTech was conceived to address this pressing challenge: How do we provide the reliable energy demanded by an environmentally sensitive world using energy resources in a sustainable and environmentally responsible manner?")
-		
-		let post5 = BasicPost(daysLeft: "25 days Left", postTitle: "IEEE 5th Congregation", organisationName: "Ghana Institute Of Management And Public Administration", postDetails: "IEEE GreenTech was conceived to address this pressing challenge: How do we provide the reliable energy demanded by an environmentally sensitive world using energy resources in a sustainable and environmentally responsible manner?")
-		
-		tempPosts.append(post1)
-		tempPosts.append(post2)
-		tempPosts.append(post3)
-		tempPosts.append(post4)
-		tempPosts.append(post5)
-		
-		return tempPosts
+
+		let params = "menu_id=\(menu_id)"
+		request.httpBody = params.data(using: String.Encoding.utf8)
+		let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+			guard let dataResponse = data,
+				error == nil else {
+					print(error?.localizedDescription ?? "Response Error")
+					return }
+			do{
+
+				let countries = try JSONDecoder().decode([Read].self, from: dataResponse)
+
+				for data in countries {
+					tempInterests.append(data)
+					print(data)
+				}
+				self.posts = []
+				self.posts = tempInterests
+
+
+
+			} catch let parsingError {
+				print("Error", parsingError)
+			}
+			DispatchQueue.main.async {
+				self.homeTableView.reloadData()
+			}
+		}
+		task.resume()
 	}
 
 }
@@ -61,6 +93,16 @@ extension LegislativeViewController: UITableViewDelegate,UITableViewDataSource {
 	
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		checkDatas()
 		return posts.count
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "legisToMore" {
+			let indexPaths=self.homeTableView!.indexPathsForSelectedRows!
+			let indexPath = indexPaths[0] as NSIndexPath
+			let vc = segue.destination as? MoreOnPolicyViewController
+			vc?.policy_id = self.posts[indexPath.row].policy_id!
+		}
 	}
 }

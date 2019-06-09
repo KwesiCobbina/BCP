@@ -19,10 +19,10 @@ class ConsultationTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-	func setPost(post: BasicPost) {
-		daysLeftLabel.text = post.daysLeft
-		institutionName.text = post.organisationName
-		titleLabel.text = post.postTitle
+	func setPost(post: Consultations) {
+		daysLeftLabel.text = post.period
+		institutionName.text = post.institution
+		titleLabel.text = post.topic
 	}
 	
 	

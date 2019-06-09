@@ -1,16 +1,30 @@
 PODS:
-  - FSCalendar (2.7.9)
+  - Alamofire (5.0.0-beta.3)
+  - FSCalendar (2.8.0)
+  - ImageSlideshow (1.7.0):
+    - ImageSlideshow/Core (= 1.7.0)
+  - ImageSlideshow/Core (1.7.0)
+  - Kingfisher (5.3.1)
+  - Locksmith (4.0.0)
   - PageMenu (1.3.0)
-  - SideMenuSwift (1.0.0)
+  - SideMenuSwift (1.0.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.3)
   - FSCalendar
+  - ImageSlideshow (~> 1.6)
+  - Kingfisher
+  - Locksmith
   - PageMenu (from `https://github.com/orazz/PageMenu.git`)
   - SideMenuSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - FSCalendar
+    - ImageSlideshow
+    - Kingfisher
+    - Locksmith
     - SideMenuSwift
 
 EXTERNAL SOURCES:
@@ -19,14 +33,18 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PageMenu:
-    :commit: 2c9e8808eed960e6520e4213a3b1a332afb6cbb1
+    :commit: 0dff02c3b965f32747a472486bce3ea88784b499
     :git: https://github.com/orazz/PageMenu.git
 
 SPEC CHECKSUMS:
-  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
+  Alamofire: 50d6fa7e8cbe7f84559e86ab641ffd029db655f8
+  FSCalendar: 3a5ed3636e2ba1b83ebebfcf0c2603105a6f5efe
+  ImageSlideshow: f8eec5e37a980f60923b585ff23b0e140fd24018
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
+  Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
   PageMenu: b132da9e56950f0720b8f1c7d9d731f635ebcdcb
-  SideMenuSwift: f8567754feb36ade13ffd613f608829f4b86d4b3
+  SideMenuSwift: a78d47182aa03b5c07570fe57d3ba22c4561f2ce
 
-PODFILE CHECKSUM: e2b5457097133dffc19df75eaa6cbdecb65aa900
+PODFILE CHECKSUM: 89dd96f20b9117acdbaf743254446a6ed91c99c0
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

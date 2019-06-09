@@ -15,16 +15,18 @@ class InterestTableViewCell: UITableViewCell {
 		@IBOutlet weak var titleLabel: UILabel!
 		@IBOutlet weak var institutionNameLabel: UILabel!
 		@IBOutlet weak var daysLaefLabel: UILabel!
+		@IBOutlet weak var descriptionLabel: UILabel!
 		override func awakeFromNib() {
 			super.awakeFromNib()
 			// Initialization code
 		}
 		
-		func setData(post: PagesData) {
-			daysLaefLabel.text = post.daysLeft
-			institutionNameLabel.text = post.organisationName
-			titleLabel.text = post.postTitle
-			durationLabel.text = post.postDuration
+		func setData(post: Interest) {
+			daysLaefLabel.text = post.period
+			institutionNameLabel.text = post.institution
+			titleLabel.text = post.topic
+			durationLabel.text = post.start_date! + " - " + post.end_date!
+			descriptionLabel.text = post.description
 		}
 		
 		
@@ -47,9 +49,9 @@ class ClosedTableViewCell: UITableViewCell {
 		// Initialization code
 	}
 	
-	func setData(post: PagesData) {
-		institutionNameLabel.text = post.organisationName
-		titleLabel.text = post.postTitle
-		durationLabel.text = post.postDuration
+	func setData(post: Consultations) {
+		institutionNameLabel.text = post.institution
+		titleLabel.text = post.topic
+		durationLabel.text = post.period
 }
 }
