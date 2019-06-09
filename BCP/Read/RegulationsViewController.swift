@@ -14,16 +14,21 @@ class RegulationsViewController: UIViewController {
 	@IBOutlet weak var appIcon: UIImageView!
 	@IBOutlet weak var noDataLabel: UILabel!
 	var policyPosts: [Read] = []
+	let child = SpinnerViewController()
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
 
 		
 		tableView2.delegate = self
 		tableView2.dataSource = self
+		showSpinner(child: child)
 		
     }
 	override func viewWillAppear(_ animated: Bool) {
 		fetchRegulations()
+		tableView2.isHidden = true
+		
 	}
 	
 	func checkDatas() {
@@ -31,12 +36,16 @@ class RegulationsViewController: UIViewController {
 			tableView2.isHidden = true
 			noDataLabel.isHidden = false
 			appIcon.isHidden = false
-			
+			hideSpinner(child: child)
 		}
 		else {
 			tableView2.isHidden = false
+			DispatchQueue.main.async {
+				self.tableView2.reloadData()
+			}
 			noDataLabel.isHidden = true
 			appIcon.isHidden = true
+			hideSpinner(child: child)
 		}
 	}
 	
@@ -72,7 +81,8 @@ class RegulationsViewController: UIViewController {
 				print("Error", parsingError)
 			}
 			DispatchQueue.main.async {
-				self.tableView2.reloadData()
+//				self.tableView2.reloadData()
+				self.checkDatas()
 			}
 		}
 		task.resume()
@@ -93,7 +103,7 @@ extension RegulationsViewController: UITableViewDataSource, UITableViewDelegate 
 	
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		checkDatas()
+//		checkDatas()
 		return policyPosts.count
 	}
 	

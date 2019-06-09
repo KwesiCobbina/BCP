@@ -14,28 +14,36 @@ class ByLawsViewController: UIViewController {
 	@IBOutlet weak var appIcon: UIImageView!
 	@IBOutlet weak var noDataLabel: UILabel!
 	var datas: [Read] = []
+	let child = SpinnerViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
 
 		byLawsTableView.delegate = self
 		byLawsTableView.dataSource = self
 		fetchByLaws()
+		byLawsTableView.isHidden = true
+		showSpinner(child: child)
         // Do any additional setup after loading the view.
     }
-    
+
 	func checkDatas() {
 		if datas.isEmpty {
 			byLawsTableView.isHidden = true
 			noDataLabel.isHidden = false
 			appIcon.isHidden = false
-			
+			hideSpinner(child: child)
 		}
 		else {
 			byLawsTableView.isHidden = false
+			DispatchQueue.main.async {
+				self.byLawsTableView.reloadData()
+			}
 			noDataLabel.isHidden = true
 			appIcon.isHidden = true
+			hideSpinner(child: child)
 		}
 	}
+	
 	func fetchByLaws() {
 		var tempAdminis: [Read] = []
 		let menu_id = "6"
@@ -68,7 +76,8 @@ class ByLawsViewController: UIViewController {
 				print("Error", parsingError)
 			}
 			DispatchQueue.main.async {
-				self.byLawsTableView.reloadData()
+//				self.byLawsTableView.reloadData()
+				self.checkDatas()
 			}
 		}
 		task.resume()

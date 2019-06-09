@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol DocumentTableViewCellDelegate {
+	func didHitDownload(for Doc: DocumentTableViewCell)
+	func didHitOpen(for Doc: DocumentTableViewCell)
+}
+
 class DocumentTableViewCell: UITableViewCell {
 
 	@IBOutlet weak var docTitleLabel: UILabel!
 	@IBOutlet weak var docIcon: UIImageView!
-	
+	@IBOutlet weak var downloadProgressBar: UIProgressView!
+	var link: String?
 	
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,5 +30,14 @@ class DocumentTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+	
+	var delegate: DocumentTableViewCellDelegate?
 
+	@IBAction func openDocument(_ sender: UIButton) {
+		delegate?.didHitOpen(for: self)
+	}
+	
+	@IBAction func downloadDocument(_ sender: UIButton) {
+		delegate?.didHitDownload(for: self)
+	}
 }

@@ -34,7 +34,7 @@ class AccountViewController: UIViewController {
 		var controllerArray: [UIViewController] = []
 		
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		let viewController1: OverviewViewController = storyboard.instantiateViewController(withIdentifier: "OverviewViewController") as! OverviewViewController
+		let viewController1: OverviewViewController = storyboard.instantiateViewController(withIdentifier: "OverviewViewController2") as! OverviewViewController
 		viewController1.title = "OVERVIEW"
 		
 		let viewController2: AccountEditViewController = storyboard.instantiateViewController(withIdentifier: "AccountEditViewController") as! AccountEditViewController

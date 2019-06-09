@@ -36,11 +36,11 @@ class HomeTwoViewController: UIViewController {
 		content.title = "BCP App"
 		content.subtitle = "National MSME Policy"
 		content.body = "Check it out now"
-		content.badge = 10
+		content.badge = 0
 		let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
 		let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
 		UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-		
+
 		print("Say Clicked")
 	}
 	@IBAction func interestClicked(_ sender: UIButton) {

@@ -18,8 +18,10 @@ class InterestsEditViewController: UIViewController {
 	var sand = Bool()
 	var longerString = ""
 	fileprivate var _selectedIndexPath: IndexPath?
-	
+	var selectedItems : [String] = []
 
+	let child = SpinnerViewController()
+	var idxx: [String] = []
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +39,9 @@ class InterestsEditViewController: UIViewController {
 		var tempInterests: [AllInterest] = []
 		//		production
 		let defaultValues = UserDefaults.standard
-		let private_individual = defaultValues.string(forKey: "userType")
-		let BCP_userID = defaultValues.string(forKey: "userID")
+		guard let private_individual = defaultValues.string(forKey: "userType") else {return}
+		guard let BCP_userID = defaultValues.string(forKey: "userID") else {return}
+		
 		
 		//		testing
 		//		let private_individual = "private_individual"
@@ -46,6 +49,7 @@ class InterestsEditViewController: UIViewController {
 		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_get_interest.php")
 		var request = URLRequest(url: url!)
 		request.httpMethod = "POST"
+//		guard let userId =
 		
 		
 		let params = "BCP_userID=\(BCP_userID)&BCP_userType=\(private_individual)"
@@ -61,10 +65,15 @@ class InterestsEditViewController: UIViewController {
 				
 				for data in interests {
 					tempInterests.append(data)
-					//					print(data)
+					self.idxx.append(data.interest_id!)
+					
 				}
 				self.datas = []
 				self.datas = tempInterests
+//				if idxx.contains(tempInterests[0].)
+				self.longerString = tempInterests[0].person_interest ?? ""
+				self.selectedItems = self.longerString.components(separatedBy: "~")
+				print(self.selectedItems)
 				
 				
 				
@@ -79,34 +88,113 @@ class InterestsEditViewController: UIViewController {
 		task.resume()
 	}
 	
+//	func createSpinnerView() {
+//		addChild(child)
+//		child.view.frame = view.frame
+//		view.addSubview(child.view)
+//		child.didMove(toParent: self)
+//	}
+//
+//	func removeSpinner(){
+//		child.willMove(toParent: nil)
+//		child.view.removeFromSuperview()
+//		child.removeFromParent()
+//	}
 	
 	@IBAction func saveInterestsClicked(_ sender: UIButton) {
+//		print(selectedItems)
+//		self.createSpinnerView()
+		showSpinner(child: child)
+		let sendArrayString = selectedItems.joined(separator: "~")
+		print(sendArrayString)
 		
-//		bcp_update_interest.php
-//		let indexPath = IndexPath(row: 0, section: 0)
-//		let cell = interestEditTableView.cellForRow(at: indexPath) as! InterestEditTableViewCell
-//		if cell.interestSwitch.isOn == true {
-//			print(cell.interestNameLabel.text)
-//		}
-		longerString.insert(separator: "~", every: 1)
-		print(longerString)
-		DispatchQueue.main.async {
-			self.longerString = ""
+		let defaultValues = UserDefaults.standard
+		let private_individual = defaultValues.string(forKey: "userType")
+		let BCP_userID = defaultValues.string(forKey: "userID")
+		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_update_interest.php")
+		var request = URLRequest(url: url!)
+		request.httpMethod = "POST"
+		let params = "BCP_userID=\(BCP_userID!)&BCP_userType=\(private_individual!)&interest=\(sendArrayString)"
+		request.httpBody = params.data(using: String.Encoding.utf8)
+		
+		let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+			guard let dataResponse = data,
+				error == nil else {
+					print(error?.localizedDescription ?? "Response Error")
+					return }
+			do{
+				let decoder = JSONDecoder()
+				let result = try decoder.decode(ErrorData.self, from: data!)
+				if result.message! == "Interest Updated Successfully" {
+//					DispatchQueue.main.async {
+						DispatchQueue.main.asyncAfter(deadline: .now() + 6.0) { // Change `2.0` to the desired number of seconds.
+							self.showToast(message: "Interest Updated Successfully")
+//							self.removeSpinner()
+							self.hideSpinner(child: self.child)
+						}
+						
+//					}
+				}
+				
+			} catch let parsingError {
+				print("Error", parsingError)
+//				self.removeSpinner()
+				self.hideSpinner(child: self.child)
+			}
+			DispatchQueue.main.async {
+				self.interestEditTableView.reloadData()
+			}
 		}
-		let cells = self.interestEditTableView.visibleCells as! Array<InterestEditTableViewCell>
-		
-//		for cell in cells {
-			// look at data
-//			var index = cell.interestSwitch.tag
-//			if datas[index].isOn == true {
-//				print(index)
-//			}
-//			if cell.interestSwitch.isOn == true {
-//				print(cell.interestNameLabel.text)
-//			}
-//		}
+		task.resume()
 	}
 }
+
+//func fetchInterests() {
+//	var tempInterests: [Interest] = []
+//	//		production
+//	let defaultValues = UserDefaults.standard
+//	let private_individual = defaultValues.string(forKey: "userType")
+//	let BCP_userID = defaultValues.string(forKey: "userID")
+//	print(defaultValues.string(forKey: "userType")!)
+//
+//	//		testing
+//	//		let private_individual = "private_individual"
+//	//		let BCP_userID = "6"
+//
+//	let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_consultation_interest.php")
+//	var request = URLRequest(url: url!)
+//	request.httpMethod = "POST"
+//
+//
+//	let params = "BCP_userID=\(BCP_userID!)&BCP_userType=\(private_individual!)"
+//	request.httpBody = params.data(using: String.Encoding.utf8)
+//	let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+//		guard let dataResponse = data,
+//			error == nil else {
+//				print(error?.localizedDescription ?? "Response Error")
+//				return }
+//		do{
+//
+//			let countries = try JSONDecoder().decode([Interest].self, from: dataResponse)
+//
+//			for data in countries {
+//				tempInterests.append(data)
+//				print(data)
+//			}
+//			self.datas = []
+//			self.datas = tempInterests
+//
+//
+//
+//		} catch let parsingError {
+//			print("Error", parsingError)
+//		}
+//		DispatchQueue.main.async {
+//			self.interestsTableView.reloadData()
+//		}
+//	}
+//	task.resume()
+//}
 
 
 extension InterestsEditViewController: UITableViewDelegate, UITableViewDataSource {
@@ -119,104 +207,41 @@ extension InterestsEditViewController: UITableViewDelegate, UITableViewDataSourc
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "interestEditCell") as! InterestEditTableViewCell
-//		if sand == true {
-//			var data = AllInterestUpdate()
-//			data = updatas[indexPath.row]
-////			cell.interests = data
-//			cell.cellDelegate = self
-//			cell.interestNameLabel.text = data.interest_name
-//			cell.backgroundColor = .red
-//			print("true")
-//		} else if sand == false {
-			var data = AllInterest()
-			print("false")
-			data = datas[indexPath.row]
-			cell.interests = data
-			cell.cellDelegate = self
-//		if data.person_interest != nil {
-//			self.longerString = data.person_interest!
-			self.longerString = "2~3~4"
-			if let myId = data.interest_id {
-				if self.longerString.contains(myId) {
-					cell.setSelected(true, animated: false)
-//					cell.accessoryType = UITableViewCell.AccessoryType.checkmark
-				} else {
-					cell.setSelected(false, animated: false)
-//					cell.accessoryType = UITableViewCell.AccessoryType.checkmark
-				}
-			}
-		
-		if cell.isSelected {
+		let data = datas[indexPath.row]
+		cell.interests = data
+		cell.cellDelegate = self
+		if selectedItems.contains(data.interest_id!) {
 			cell.accessoryType = .checkmark
 		}
 		else {
 			cell.accessoryType = .none
 		}
-			
-//		}
-//		}
-//		let data = datas[indexPath.row]
-		
-		
-//		let sw = UISwitch(frame: CGRect())
-//		sw.transform = CGAffineTransform(scaleX: 0.9, y: 0.9);
-//		sw.tag = indexPath.row
-//		sw.addTarget(self, action: #selector(InterestsEditViewController.switchTapped(_:)), for: UIControl.Event.valueChanged)
-//		cell.accessoryView = sw
-		cell.selectionStyle = .none
-		
 		return cell
 	}
 	
-//	@IBAction func switchTapped(_ sender: UISwitch) {
-//		let index = sender.tag
-//		print(index)
-//		self.sand = true
-//		guard let id = datas[index].interest_id else {return}
-//		guard let p = datas[index].person_interest?.contains(id) else {return}
-//		if p == false {
-//			print("switch on")
-//		}
-//
-//	}
-//	@objc func switchTapped(_ sender: UISwitch) {
-//		let index = sender.tag
-//		print(index)
-//		self.sand = true
-//		guard let id = datas[index].interest_id else {return}
-//		guard let p = datas[index].person_interest?.contains(id) else {return}
-//		if p == false {
-//			print("switch on")
-//		}
-//
-//	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "interestEditCell") as! InterestEditTableViewCell
 		let data = self.datas[indexPath.row]
-		if cell.accessoryType == UITableViewCell.AccessoryType.none {
-			let idx = data.interest_id
-			self.longerString.append(contentsOf: "~\(idx!)")
-			print(self.longerString)
+		if selectedItems.contains(data.interest_id!) {
+			print("its here")
 		} else {
-//			let idx = data.interest_id
-//			if let i = longerString.firstIndex(of: idx!) {
-//				longerString.remove(at: i)
-//			}
-			
+			self.selectedItems.append(data.interest_id!)
+			interestEditTableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
 		}
+		print(selectedItems)
 	}
 	
 	func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "interestEditCell") as! InterestEditTableViewCell
 		let data = self.datas[indexPath.row]
-//		print(cell.accessoryType)
-//		if cell.accessoryType == UITableViewCell.AccessoryType.checkmark {
-			let idx = data.interest_id
-			self.longerString = self.longerString.replacingOccurrences(of: "~\(idx!)", with: "")
-			print(longerString)
-//		}
-		
+		let selectedCellValue = data.interest_id!
+		interestEditTableView.cellForRow(at: indexPath)?.accessoryType = .none
+		for a in selectedItems {
+			if a == selectedCellValue {
+				selectedItems.remove(at: selectedItems.index(of: a)!)
+			}
+		}
+		print(selectedItems)
+
 	}
 }
 
@@ -227,12 +252,7 @@ extension InterestsEditViewController: SettingCellDelegate {
 		self.sand = true
 		let index = self.interestEditTableView.indexPath(for: sender)
 		let data = datas[(index?.row)!]
-//	if self.longerString.contains(data.interest_id!) {
-//			print("BASAAA")
-//		} else {
-//			self.longerString.append(contentsOf: data.interest_id!)
-////			print(data)
-//		}
+
 	}
 }
 

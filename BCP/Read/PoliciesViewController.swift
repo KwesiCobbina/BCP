@@ -15,32 +15,31 @@ class PoliciesViewController: UIViewController {
 	@IBOutlet weak var noDataLabel: UILabel!
 	var datas: [Read] = []
 	var policy_id = ""
+	let child = SpinnerViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
 
 		policiesTableView.delegate = self
 		policiesTableView.dataSource = self
 		fetchPolicies()
-        // Do any additional setup after loading the view.
+		policiesTableView.isHidden = true
+		showSpinner(child: child)
     }
-//
-//	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//		if segue.identifier == "policyToMore" {
-//			self.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
-//		}
-//	}
-	
 	func checkDatas() {
 		if datas.isEmpty {
 			policiesTableView.isHidden = true
 			noDataLabel.isHidden = false
 			appIcon.isHidden = false
-			
+			hideSpinner(child: child)
 		}
 		else {
 			policiesTableView.isHidden = false
+			DispatchQueue.main.async {
+				self.policiesTableView.reloadData()
+			}
 			noDataLabel.isHidden = true
 			appIcon.isHidden = true
+			hideSpinner(child: child)
 		}
 	}
 	
@@ -76,7 +75,8 @@ class PoliciesViewController: UIViewController {
 				print("Error", parsingError)
 			}
 			DispatchQueue.main.async {
-				self.policiesTableView.reloadData()
+//				self.policiesTableView.reloadData()
+				self.checkDatas()
 			}
 		}
 		task.resume()
@@ -96,7 +96,7 @@ extension PoliciesViewController: UITableViewDataSource, UITableViewDelegate {
 	
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		checkDatas()
+//		checkDatas()
 		return datas.count
 	}
 	

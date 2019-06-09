@@ -14,12 +14,15 @@ class GeneralViewController: UIViewController {
 	@IBOutlet weak var appIcon: UIImageView!
 	@IBOutlet weak var noDataLabel: UILabel!
 	var datas: [Read] = []
+	let child = SpinnerViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
 
 		generalTableView.delegate = self
 		generalTableView.dataSource = self
 		fetchGeneral()
+		generalTableView.isHidden = true
+		showSpinner(child: child)
         // Do any additional setup after loading the view.
     }
 	
@@ -28,12 +31,16 @@ class GeneralViewController: UIViewController {
 			generalTableView.isHidden = true
 			noDataLabel.isHidden = false
 			appIcon.isHidden = false
-			
+			hideSpinner(child: child)
 		}
 		else {
 			generalTableView.isHidden = false
+			DispatchQueue.main.async {
+				self.generalTableView.reloadData()
+			}
 			noDataLabel.isHidden = true
 			appIcon.isHidden = true
+			hideSpinner(child: child)
 		}
 	}
 	
@@ -69,7 +76,8 @@ class GeneralViewController: UIViewController {
 				print("Error", parsingError)
 			}
 			DispatchQueue.main.async {
-				self.generalTableView.reloadData()
+//				self.generalTableView.reloadData()
+				self.checkDatas()
 			}
 		}
 		task.resume()

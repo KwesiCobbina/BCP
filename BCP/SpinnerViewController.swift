@@ -16,14 +16,15 @@ class SpinnerViewController: UIViewController {
 	
 	override func loadView() {
 		view = UIView()
-		view.backgroundColor = UIColor(white: 0, alpha: 0.7)
+		view.backgroundColor = UIColor(white: 1, alpha: 0.7)
 		
 		spinner.translatesAutoresizingMaskIntoConstraints = false
 		spinner.startAnimating()
+		spinner.color = .gray
 		
 		label.translatesAutoresizingMaskIntoConstraints = false
 		label.text = "Please wait..."
-		label.textColor = UIColor.white
+		label.textColor = UIColor.gray
 		view.addSubview(spinner)
 		view.addSubview(label)
 		

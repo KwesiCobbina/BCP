@@ -67,7 +67,21 @@ extension UIViewController {
 		}, completion: {(isCompleted) in
 			toastLabel.removeFromSuperview()
 		})
-	} }
+	}
+	
+	func showSpinner(child: SpinnerViewController) {
+		addChild(child)
+		child.view.frame = view.frame
+		view.addSubview(child.view)
+		child.didMove(toParent: self)
+	}
+	
+	func hideSpinner(child: SpinnerViewController){
+		child.willMove(toParent: nil)
+		child.view.removeFromSuperview()
+		child.removeFromParent()
+	}
+}
 
 
 

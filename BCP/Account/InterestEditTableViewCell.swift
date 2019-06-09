@@ -50,7 +50,7 @@ class InterestEditTableViewCell: UITableViewCell {
 	@IBOutlet weak var interestSwitch: UISwitch!
 	weak var cellDelegate: SettingCellDelegate?
 	
-	var sl = ""
+	var cellId = ""
 	var e = ""
 	override func awakeFromNib() {
         super.awakeFromNib()
@@ -61,11 +61,11 @@ class InterestEditTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
 		
-		if selected {
-			accessoryType = .checkmark
-		} else {
-			accessoryType = .none
-		}
+//		if selected {
+//			accessoryType = .checkmark
+//		} else {
+//			accessoryType = .none
+//		}
         // Configure the view for the selected state
     }
 	@IBAction func cellStateChanged(_ sender: UISwitch) {

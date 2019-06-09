@@ -14,6 +14,7 @@ class LegislativeViewController: UIViewController {
 	@IBOutlet weak var appIcon: UIImageView!
 	@IBOutlet weak var noDataLabel: UILabel!
 	var posts: [Read] = []
+	let child = SpinnerViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +24,8 @@ class LegislativeViewController: UIViewController {
 //		homeTableView.rowHeight = 160
         // Do any additional setup after loading the view.
 		fetchLegisilative()
+		homeTableView.isHidden = true
+		showSpinner(child: child)
     }
 	
 	func checkDatas() {
@@ -30,11 +33,16 @@ class LegislativeViewController: UIViewController {
 			homeTableView.isHidden = true
 			noDataLabel.isHidden = false
 			appIcon.isHidden = false
-			
+			hideSpinner(child: child)
 		}
 		else {
 			homeTableView.isHidden = false
+			DispatchQueue.main.async {
+				self.homeTableView.reloadData()
+			}
 			noDataLabel.isHidden = true
+			appIcon.isHidden = true
+			hideSpinner(child: child)
 			appIcon.isHidden = true
 		}
 	}
@@ -71,7 +79,8 @@ class LegislativeViewController: UIViewController {
 				print("Error", parsingError)
 			}
 			DispatchQueue.main.async {
-				self.homeTableView.reloadData()
+//				self.homeTableView.reloadData()
+				self.checkDatas()
 			}
 		}
 		task.resume()
@@ -93,7 +102,7 @@ extension LegislativeViewController: UITableViewDelegate,UITableViewDataSource {
 	
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		checkDatas()
+//		checkDatas()
 		return posts.count
 	}
 	

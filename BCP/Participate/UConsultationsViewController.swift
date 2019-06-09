@@ -32,15 +32,19 @@ class UConsultationsViewController: UIViewController {
 	var ignore: [Consultations] = []
 	var carryArray:[Consultations] = []
 	
+	let child = SpinnerViewController()
+	
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
 
+		
 		upConsultTableView.delegate = self
 		upConsultTableView.dataSource = self
 		monthSegment.isHidden = true
-//		datas = createArray()
-        // Do any additional setup after loading the view.
 		fetchUpComingConsultations()
+		upConsultTableView.isHidden = true
+		showSpinner(child: child)
 		
 		
     }
@@ -53,7 +57,7 @@ class UConsultationsViewController: UIViewController {
 			upConsultTableView.isHidden = true
 			noDataMessage.isHidden = false
 			appIcon.isHidden = false
-			
+			hideSpinner(child: child)
 		}
 		else {
 			upConsultTableView.isHidden = false
@@ -62,6 +66,7 @@ class UConsultationsViewController: UIViewController {
 			}
 			noDataMessage.isHidden = true
 			appIcon.isHidden = true
+			hideSpinner(child: child)
 		}
 	}
 	
@@ -129,7 +134,14 @@ class UConsultationsViewController: UIViewController {
 				print("Error", parsingError)
 			}
 			DispatchQueue.main.async {
-				self.upConsultTableView.reloadData()
+//				if self.datas.isEmpty {
+//					print("nil")
+//					self.upConsultTableView.isHidden = true
+//				}
+//				else {
+//				self.upConsultTableView.reloadData()
+//				}
+				self.checkDatas()
 			}
 		}
 		task.resume()
@@ -153,57 +165,6 @@ class UConsultationsViewController: UIViewController {
 
 extension UConsultationsViewController: UITableViewDataSource, UITableViewDelegate {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//		let index = monthSegment.selectedSegmentIndex
-//
-//		if index == 0 {
-//			datas = januaryArray
-//			checkDatas()
-//		}
-//		else if index == 1 {
-//			datas = februaryArray
-//			checkDatas()
-//		}
-//		else if index == 2 {
-//			datas = marchArray
-//			checkDatas()
-//		}
-//		else if index == 3 {
-//			datas = aprilArray
-//			checkDatas()
-//		}
-//		else if index == 4 {
-//			datas = mayArray
-//			checkDatas()
-//		}
-//		else if index == 5 {
-//			datas = juneArray
-//			checkDatas()
-//		}
-//		else if index == 6 {
-//			datas = julyArray
-//			checkDatas()
-//		}
-//		else if index == 7 {
-//			datas = augustArray
-//			checkDatas()
-//		}
-//		else if index == 8 {
-//			datas = septemberArray
-//			checkDatas()
-//		}
-//		else if index == 9 {
-//			datas = octoberArray
-//			checkDatas()
-//		}
-//		else if index == 10 {
-//			datas = novemberArray
-//			checkDatas()
-//		}
-//		else if index == 11 {
-//			datas = decemberArray
-//			checkDatas()
-//		}
-//		checkDatas()
 		return datas.count
 	}
 	
@@ -219,17 +180,6 @@ extension UConsultationsViewController: UITableViewDataSource, UITableViewDelega
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "currentToDetails" {
-//			let indexPaths = self.upConsultTableView!.indexPathsForSelectedRows!
-//			let indexPath = indexPaths[0] as NSIndexPath
-//			let vc = segue.destination as? MoreDetailsViewController
-//			vc?.t = false
-//			vc?.daysLeft = self.datas[indexPath.row].period
-//			vc?.details = self.datas[indexPath.row].description
-//			vc?.institutionName = self.datas[indexPath.row].institution
-//			vc?.topicTitle = self.datas[indexPath.row].topic
-//			vc?.srtDate = self.datas[indexPath.row].start_date
-//			vc?.postedDate = self.datas[indexPath.row].created_on
-			
 			if let button = sender as? UIButton {
 				let vc = segue.destination as? MoreDetailsViewController
 				vc?.t = false

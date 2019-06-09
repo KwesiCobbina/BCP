@@ -26,6 +26,7 @@
 		EA7607F1224FFCD900D5B125 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7607F0224FFCD900D5B125 /* WebKit.framework */; };
 		EA7794012278B678008B635C /* SayItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7794002278B678008B635C /* SayItemViewController.swift */; };
 		EA7794032278B690008B635C /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7794022278B690008B635C /* CommentsViewController.swift */; };
+		EA793A5C22A98B870001FCF6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA793A5B22A98B870001FCF6 /* RegisterViewController.swift */; };
 		EA81E26F226B31DE003572D6 /* ByLawsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81E26E226B31DE003572D6 /* ByLawsViewController.swift */; };
 		EA81E271226B31EF003572D6 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81E270226B31EF003572D6 /* GeneralViewController.swift */; };
 		EA81E273226B3204003572D6 /* PoliciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81E272226B3204003572D6 /* PoliciesViewController.swift */; };
@@ -95,6 +96,7 @@
 		EA7607F0224FFCD900D5B125 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		EA7794002278B678008B635C /* SayItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayItemViewController.swift; sourceTree = "<group>"; };
 		EA7794022278B690008B635C /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		EA793A5B22A98B870001FCF6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EA81E26E226B31DE003572D6 /* ByLawsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByLawsViewController.swift; sourceTree = "<group>"; };
 		EA81E270226B31EF003572D6 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
 		EA81E272226B3204003572D6 /* PoliciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliciesViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				EACB108622297A460079D79D /* InterestModel.swift */,
 				EA349C77223C4C130055CB7D /* LoginViewController.swift */,
 				EA59F112224A1A4000077840 /* MenuViewController.swift */,
+				EA793A5B22A98B870001FCF6 /* RegisterViewController.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				EAEB0FE12270E72800CD1EB5 /* AccountEditViewController.swift in Sources */,
 				EAC47A062214A138009B5630 /* PollsViewController.swift in Sources */,
 				EA7607EF224FFB8500D5B125 /* WebTestViewController.swift in Sources */,
+				EA793A5C22A98B870001FCF6 /* RegisterViewController.swift in Sources */,
 				EAF6F084229432570082FEB5 /* DocumentTableViewCell.swift in Sources */,
 				EA962DE6220592F200E805A0 /* LegislativeViewController.swift in Sources */,
 				EAAD39E8220B416400011A53 /* ConsultationTableViewCell.swift in Sources */,
