@@ -69,6 +69,14 @@ extension UIViewController {
 		})
 	}
 	
+	func showAlert(title: String, message: String){
+		let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+		alert.addAction(UIAlertAction(title: "Close", style: UIAlertAction.Style.cancel, handler: nil))
+		// show the alert
+		self.present(alert, animated: true, completion: nil)
+	}
+	
+	
 	func showSpinner(child: SpinnerViewController) {
 		addChild(child)
 		child.view.frame = view.frame
@@ -194,7 +202,7 @@ extension StringProtocol {
 		return prefix(1).uppercased()  + dropFirst()
 	}
 	var firstCapitalized: String {
-		return prefix(1).capitalized + dropFirst()
+		return prefix(1).uppercased() + dropFirst()
 	}
 }
 
@@ -213,5 +221,33 @@ extension NSMutableAttributedString {
 		append(normal)
 		
 		return self
+	}
+}
+
+
+extension Date {
+	func isInSameWeek(date: Date) -> Bool {
+		return Calendar.current.isDate(self, equalTo: date, toGranularity: .weekOfYear)
+	}
+	func isInSameMonth(date: Date) -> Bool {
+		return Calendar.current.isDate(self, equalTo: date, toGranularity: .month)
+	}
+	func isInSameYear(date: Date) -> Bool {
+		return Calendar.current.isDate(self, equalTo: date, toGranularity: .year)
+	}
+	func isInSameDay(date: Date) -> Bool {
+		return Calendar.current.isDate(self, equalTo: date, toGranularity: .day)
+	}
+	var isInThisWeek: Bool {
+		return isInSameWeek(date: Date())
+	}
+	var isInToday: Bool {
+		return Calendar.current.isDateInToday(self)
+	}
+	var isInTheFuture: Bool {
+		return Date() < self
+	}
+	var isInThePast: Bool {
+		return self < Date()
 	}
 }

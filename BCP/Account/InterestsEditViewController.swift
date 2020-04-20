@@ -46,7 +46,8 @@ class InterestsEditViewController: UIViewController {
 		//		testing
 		//		let private_individual = "private_individual"
 		//		let BCP_userID = "6"
-		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_get_interest.php")
+		let url = URL(string: "\(AppConstants.sharedInstance.prodURL)bcp_get_interest.php")
+//		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_get_interest.php")
 		var request = URLRequest(url: url!)
 		request.httpMethod = "POST"
 //		guard let userId =
@@ -72,8 +73,12 @@ class InterestsEditViewController: UIViewController {
 				self.datas = tempInterests
 //				if idxx.contains(tempInterests[0].)
 				self.longerString = tempInterests[0].person_interest ?? ""
-				self.selectedItems = self.longerString.components(separatedBy: "~")
-				print(self.selectedItems)
+				if self.longerString != "" {
+					self.selectedItems = self.longerString.components(separatedBy: "~")
+					print(self.selectedItems)
+				}
+				
+				
 				
 				
 				
@@ -104,21 +109,26 @@ class InterestsEditViewController: UIViewController {
 	@IBAction func saveInterestsClicked(_ sender: UIButton) {
 //		print(selectedItems)
 //		self.createSpinnerView()
-		showSpinner(child: child)
+		DispatchQueue.main.async {
+			self.showSpinner(child: self.child)
+		}
+		
 		let sendArrayString = selectedItems.joined(separator: "~")
 		print(sendArrayString)
 		
 		let defaultValues = UserDefaults.standard
 		let private_individual = defaultValues.string(forKey: "userType")
 		let BCP_userID = defaultValues.string(forKey: "userID")
-		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_update_interest.php")
+		let url = URL(string: "\(AppConstants.sharedInstance.prodURL)bcp_update_interest.php")
+//		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_update_interest.php")
+//		print(private_individual)
 		var request = URLRequest(url: url!)
 		request.httpMethod = "POST"
 		let params = "BCP_userID=\(BCP_userID!)&BCP_userType=\(private_individual!)&interest=\(sendArrayString)"
 		request.httpBody = params.data(using: String.Encoding.utf8)
 		
 		let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-			guard let dataResponse = data,
+			guard let _ = data,
 				error == nil else {
 					print(error?.localizedDescription ?? "Response Error")
 					return }

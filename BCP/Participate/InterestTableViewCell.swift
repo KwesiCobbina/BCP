@@ -23,8 +23,8 @@ class InterestTableViewCell: UITableViewCell {
 		}
 		
 		func setData(post: Interest) {
-			daysLaefLabel.text = post.period
-			institutionNameLabel.text = post.institution
+//			daysLaefLabel.text = post.period
+//			institutionNameLabel.text = post.institution
 			titleLabel.text = post.topic
 			durationLabel.text = post.start_date! + " - " + post.end_date!
 			descriptionLabel.text = post.description

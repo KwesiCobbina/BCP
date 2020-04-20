@@ -35,8 +35,7 @@ class SayItemViewController: UIViewController {
 		
 		let useDefaults = UserDefaults.standard
 		let forum_id = useDefaults.string(forKey: "forum_id")
-//		let forum_id = "1"
-		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_discussion_view_reply.php")
+		let url = URL(string: "\(AppConstants.sharedInstance.devURL)bcp_discussion_view_reply.php")
 		var request = URLRequest(url: url!)
 		request.httpMethod = "POST"
 		
@@ -69,7 +68,7 @@ class SayItemViewController: UIViewController {
 			}
 			DispatchQueue.main.async {
 				print(self.datas.count)
-				self.nameLabel.text = self.mainPost.created_by ?? "Kennedy Hliboto"
+				self.nameLabel.text = self.mainPost.created_by ?? "System User"
 				self.numberOfComments.text = self.mainPost.total_comments
 				self.createdOnLabel.text = self.mainPost.start_date
 				self.closingLabel.text = self.mainPost.end_date

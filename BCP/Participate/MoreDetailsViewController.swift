@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoreDetailsViewController: UIViewController {
+class MoreDetailsViewController: UIViewController, UITextViewDelegate {
 
 
 	@IBOutlet weak var detailsInfoLabel: UILabel!
@@ -16,15 +16,17 @@ class MoreDetailsViewController: UIViewController {
 	@IBOutlet weak var institutionLabel: UILabel!
 	@IBOutlet weak var startDate: UILabel!
 	@IBOutlet weak var postDate: UILabel!
-	@IBOutlet weak var dulationLabel: UILabel!
+	@IBOutlet weak var durationLabel: UILabel!
 	@IBOutlet weak var daysLeftLabel: UILabel!
 	@IBOutlet weak var submitButton: UIButton!
-	@IBOutlet weak var shareButton: UIButton!
+	@IBOutlet weak var commentButton: UIButton!
 	@IBOutlet weak var dismissButton: UIButton!
-	@IBOutlet weak var commentTextBox: UITextView!
+	@IBOutlet weak var commentLabel: UILabel!
 	@IBOutlet weak var detailsLabelHeight: NSLayoutConstraint!
+	@IBOutlet weak var detailsInfoTextBox: UITextView!
+    @IBOutlet weak var timeFrameLabel: UILabel!
 	
-	
+    var selectedRecent:Recents?
 	var topicTitle: String?
 	var institutionName: String?
 	var daysLeft: String?
@@ -32,84 +34,58 @@ class MoreDetailsViewController: UIViewController {
 	var postedDate: String?
 	var srtDate: String?
 	var duration: String?
-	
+    var endDate: String?
+    var incoming_id: String?
 	var t: Bool?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
 		if t == true {
-			dismissButton.isHidden = true
+//			dismissButton.isHidden = true
+            commentLabel.isHidden = true
+            commentButton.isHidden = true
 		}
+        else {
+            commentLabel.isHidden = false
+            commentButton.isHidden = false
+        }
 		
 	}
+	
+	func textViewDidChange(_ textView: UITextView) {
+		if detailsInfoTextBox.contentSize.height >= 300 {
+			detailsInfoTextBox.isScrollEnabled = true
+		} else {
+			detailsInfoTextBox.frame.size.height = detailsInfoTextBox.contentSize.height
+			detailsInfoTextBox.isScrollEnabled = false
+		}
+	}
+
 	
 	override func viewDidAppear(_ animated: Bool) {
-		topicLabel.text = topicTitle
-		institutionLabel.text = institutionName
-		dulationLabel.text = daysLeft
-		daysLeftLabel.text = daysLeft
-//		let h = details?.height(withConstrainedWidth: self.view.frame.width, font: .systemFont(ofSize: 15))
-//		detailsLabelHeight = h
-//		detailsInfoLabel.heightAnchor.constraint(equalToConstant: h!).isActive = true
-		detailsInfoLabel.text = details
-		startDate.text = srtDate
-		dulationLabel.text = duration
-		let dateString = postedDate
-		self.detailsInfoLabel.sizeToFit()
-//		print(details)
-//		print( h!)
-		
-		let dateFormatter = DateFormatter()
-		dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-		let dateFromString = dateFormatter.date(from: dateString!)
-		let dateFormatter2 = DateFormatter()
-		dateFormatter2.dateFormat = "MMMM dd, yyyy"
-		let stringFromDate = dateFormatter2.string(from: dateFromString!)
-		postDate.text = stringFromDate
+        topicLabel.text = topicTitle
+        institutionLabel.text = institutionName
+        detailsInfoLabel.text = details?.htmlToString
+        startDate.text = srtDate
+        durationLabel.text = duration
+        postDate.text = endDate
+        timeFrameLabel.text = srtDate! + " - " + endDate!
+
+
 	}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailsToComment"{
+            let commentView = segue.destination as? CommentViewController
+            commentView?.needed_id = incoming_id
+        }
+    }
 	
-	@IBAction func submitClicked(_ sender: UIButton) {
-		if commentTextBox.text != "" || commentTextBox.text != "Enter Comment Here" {
-			let useDefaults = UserDefaults.standard
-			guard let forum_id = useDefaults.string(forKey: "forum_id") else {return}
-			guard let BCP_userID = useDefaults.string(forKey: "userID") else {return}
-			guard let BCP_userType = useDefaults.string(forKey: "userType") else {return}
-			print(BCP_userID)
-			
-			let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_consultation_comment.php")
-			var request = URLRequest(url: url!)
-			request.httpMethod = "POST"
-			
-			let params = "forum_id=\(String(describing: forum_id))&BCP_userID=\(BCP_userID)&BCP_userType=\(BCP_userType)&message=\(commentTextBox.text!)"
-			request.httpBody = params.data(using: String.Encoding.utf8)
-			
-			let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-				if error != nil {
-					print(error?.localizedDescription as Any)
-					return
-				} else {
-					let httpResponse = response as? HTTPURLResponse
-					if httpResponse?.statusCode == 200 {
-//						self.fetchComments()
-					}
-					else {
-						print("sorry there was a proplem here")
-					}
-				}
-			}
-			task.resume()
-//			self.commentTextField.text = ""
-//			self.commentTextField.placeholder = "Enter Comment..."
-//		}
-		}
-	}
 	
 	@IBAction func shareClicked(_ sender: UIButton) {
 		let text = "This is the text...."
-//		let image = UIImage(named: "Product")
 		let myWebsite = NSURL(string:"http://www.Index-holdings.com")
-//		let shareAll = [text , myWebsite!] as [Any]
 		let shareAll = [topicTitle, institutionName, details, "Starts on \(srtDate!) and lasts for \(daysLeft!)", myWebsite!] as [Any]
 		let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
 		activityViewController.popoverPresentationController?.sourceView = self.view
@@ -120,13 +96,14 @@ class MoreDetailsViewController: UIViewController {
 		self.dismiss(animated: true, completion: nil)
 	}
 	
-//	override func viewWillAppear(_ animated: Bool) {
-//		dismissButton.isHidden = t ?? true
-//	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
-		dismissButton.isHidden = true
+//		dismissButton.isHidden = true
 	}
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
 }
 
 
@@ -147,3 +124,4 @@ extension UILabel {
 	}
 	
 }
+

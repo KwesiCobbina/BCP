@@ -6,7 +6,7 @@
 	<string>development</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)CasaDev.BCP</string>
+		<string>$(AppIdentifierPrefix)com.indexcom.casadev.BCP</string>
 	</array>
 </dict>
 </plist>

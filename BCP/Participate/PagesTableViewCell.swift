@@ -34,8 +34,6 @@ class PagesTableViewCell: UITableViewCell {
     }
 	
 	func setData(post: Consultations) {
-		daysLaefLabel.text = post.period!
-		institutionNameLabel.text = post.institution!
 		titleLabel.text = post.topic!
 		postDetailsLabel.text = post.description!
 		durationLabel.text = post.start_date! + " - " + post.end_date!

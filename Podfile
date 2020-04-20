@@ -12,6 +12,11 @@ pod 'ImageSlideshow', '~> 1.6'
 pod 'Alamofire', '~> 5.0.0-beta.3'
 pod 'Locksmith'
 pod 'Kingfisher'
+pod 'Firebase/Core'
+pod 'Firebase'
+pod 'Firebase/Messaging'
+pod 'IQKeyboardManagerSwift'
+pod 'MessageKit', '~> 3.0.0'
 
   # Pods for BCP
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>83946472418-nmjruvhi77pu68bs2j3vsk994n8sp9kb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.83946472418-nmjruvhi77pu68bs2j3vsk994n8sp9kb</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAQjd9xbwTwxho4y_EFfS_GKPm0ml8XJwg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>83946472418</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.indexcom.casadev.BCP-Prod</string>
+	<key>PROJECT_ID</key>
+	<string>gbcpapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gbcpapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:83946472418:ios:e48402876ae66f6a</string>
+	<key>DATABASE_URL</key>
+	<string>https://gbcpapp.firebaseio.com</string>
+</dict>
+</plist>

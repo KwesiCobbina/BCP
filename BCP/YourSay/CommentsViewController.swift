@@ -32,7 +32,8 @@ class CommentsViewController: UIViewController, UITextFieldDelegate {
 		let useDefaults = UserDefaults.standard
 		let forum_id = useDefaults.string(forKey: "forum_id")
 		//		let forum_id = "1"
-		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_discussion_view_reply.php")
+		let url = URL(string: "\(AppConstants.sharedInstance.devURL)bcp_discussion_view_reply.php")
+//		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_discussion_view_reply.php")
 		var request = URLRequest(url: url!)
 		request.httpMethod = "POST"
 		
@@ -107,7 +108,8 @@ class CommentsViewController: UIViewController, UITextFieldDelegate {
 			guard let BCP_userType = useDefaults.string(forKey: "userType") else {return}
 			print(BCP_userID)
 
-			let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_publish_forum_comment.php")
+//			let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_publish_forum_comment.php")
+			let url = URL(string: "\(AppConstants.sharedInstance.devURL)bcp_publish_forum_comment.php")
 			var request = URLRequest(url: url!)
 			request.httpMethod = "POST"
 

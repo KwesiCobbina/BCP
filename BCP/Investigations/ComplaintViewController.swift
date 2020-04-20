@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ComplaintViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class ComplaintViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
 	
 	
 
-	@IBOutlet weak var complaintitle: UITextField!
+	@IBOutlet weak var complaintitle: UITextView!
 	@IBOutlet weak var companyName: UITextField!
 	@IBOutlet weak var sector: UITextField!
-	@IBOutlet weak var complainDescription: UITextField!
+	@IBOutlet weak var complainDescription: UITextView!
 	@IBOutlet weak var country: UITextField!
 	@IBOutlet weak var first_Name: UITextField!
 	@IBOutlet weak var last_Name: UITextField!
@@ -111,6 +111,10 @@ class ComplaintViewController: UIViewController, UITextFieldDelegate, UIPickerVi
 		
 	}
 	
+//	func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+//		return false
+//	}
+	
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		textField.resignFirstResponder()
 		return true
@@ -119,7 +123,8 @@ class ComplaintViewController: UIViewController, UITextFieldDelegate, UIPickerVi
 	@IBAction func submitComplain(_ sender: UIButton) {
 		
 		createSpinnerView()
-		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_sumit_complaint.php")
+		let url = URL(string: "\(AppConstants.sharedInstance.prodURL)bcp_sumit_complaint.php")
+//		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_sumit_complaint.php")
 		var request = URLRequest(url: url!)
 		request.httpMethod = "POST"
 		
@@ -223,8 +228,8 @@ class ComplaintViewController: UIViewController, UITextFieldDelegate, UIPickerVi
 	
 	func fetchCountries(){
 		var tempcountry: [Country] = []
-		
-		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_get_country.php")
+		let url = URL(string: "\(AppConstants.sharedInstance.prodURL)bcp_get_country.php")
+//		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_get_country.php")
 		let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
 			guard let dataResponse = data,
 				error == nil else {
@@ -254,8 +259,8 @@ class ComplaintViewController: UIViewController, UITextFieldDelegate, UIPickerVi
 	
 	func fetchSectors(){
 		var tempsectors: [Country] = []
-		
-		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_get_sector.php")
+		let url = URL(string: "\(AppConstants.sharedInstance.prodURL)bcp_get_sector.php")
+//		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_get_sector.php")
 		let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
 			guard let dataResponse = data,
 				error == nil else {
@@ -285,8 +290,8 @@ class ComplaintViewController: UIViewController, UITextFieldDelegate, UIPickerVi
 	
 	func fetchComplaintTypes(){
 		var tempcomplaint: [Country] = []
-		
-		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_get_complaint_type.php")
+		let url = URL(string: "\(AppConstants.sharedInstance.prodURL)bcp_get_complaint_type.php")
+//		let url = URL(string: "http://www.Index-holdings.com/bcp/bcp_api/bcp_get_complaint_type.php")
 		let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
 			guard let dataResponse = data,
 				error == nil else {

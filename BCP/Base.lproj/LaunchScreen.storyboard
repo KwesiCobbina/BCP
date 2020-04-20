@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,11 +23,10 @@
                                     <constraint firstAttribute="height" constant="200" id="ceC-Dv-9QP"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GHANA BUSINESS CONSULTATIONS PORTAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cw-18-nOd">
-                                <rect key="frame" x="82" y="399" width="250" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GHANA BUSINESS REGULATORY REFORMS PORTAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cw-18-nOd">
+                                <rect key="frame" x="20" y="399" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="A0M-X1-ebF"/>
-                                    <constraint firstAttribute="width" constant="250" id="pG7-aR-1QT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -39,6 +36,8 @@
                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BEL-Pl-fHq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="ALN-hR-4HX"/>
+                            <constraint firstAttribute="trailing" secondItem="1Cw-18-nOd" secondAttribute="trailing" constant="20" id="gCL-VV-dma"/>
+                            <constraint firstItem="1Cw-18-nOd" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="j0s-fq-oNt"/>
                             <constraint firstItem="1Cw-18-nOd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sCJ-Fe-es3"/>
                             <constraint firstItem="BEL-Pl-fHq" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sHv-Bs-eIx"/>
                             <constraint firstItem="1Cw-18-nOd" firstAttribute="top" secondItem="BEL-Pl-fHq" secondAttribute="bottom" constant="15" id="ycD-kO-pMq"/>

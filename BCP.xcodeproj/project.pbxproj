@@ -3,16 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		03E8C00C0322260C442EF797 /* Pods_BCP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE1B1D6A9A682DD6C2E4C4E /* Pods_BCP.framework */; };
+		48066EDF22AD9C72004A020B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48066EDE22AD9C72004A020B /* CoreDataManager.swift */; };
+		48066EE322AD9CEC004A020B /* DownloadedDocuments+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48066EE122AD9CEC004A020B /* DownloadedDocuments+CoreDataClass.swift */; };
+		48066EE422AD9CEC004A020B /* DownloadedDocuments+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48066EE222AD9CEC004A020B /* DownloadedDocuments+CoreDataProperties.swift */; };
 		EA0C84632267908D00B30306 /* YourSayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C84622267908D00B30306 /* YourSayViewController.swift */; };
 		EA0C8465226791F100B30306 /* SayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C8464226791F100B30306 /* SayTableViewCell.swift */; };
-		EA177E6222071BA7005371B0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA177E6122071BA7005371B0 /* HomeViewController.swift */; };
-		EA177E6522071ECB005371B0 /* AdministrativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA177E6422071ECB005371B0 /* AdministrativeViewController.swift */; };
-		EA177E6722071ED7005371B0 /* RegulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA177E6622071ED7005371B0 /* RegulationsViewController.swift */; };
+		EA177E6222071BA7005371B0 /* RegulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA177E6122071BA7005371B0 /* RegulationsViewController.swift */; };
+		EA177E6722071ED7005371B0 /* FeesAndChargesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA177E6622071ED7005371B0 /* FeesAndChargesViewController.swift */; };
+		EA2010BB2444F38300DD8FB9 /* RegulatoryNoticesViewControllerz.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2010B32444F38300DD8FB9 /* RegulatoryNoticesViewControllerz.swift */; };
+		EA2010BC2444F38300DD8FB9 /* AdministrativeDirectiveViewControllerz.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2010B42444F38300DD8FB9 /* AdministrativeDirectiveViewControllerz.swift */; };
+		EA2010BD2444F38300DD8FB9 /* ByLawsViewControllerz.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2010B52444F38300DD8FB9 /* ByLawsViewControllerz.swift */; };
+		EA2010BE2444F38300DD8FB9 /* RegulationsViewControllerz.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2010B62444F38300DD8FB9 /* RegulationsViewControllerz.swift */; };
+		EA2010BF2444F38300DD8FB9 /* FeesAndChargesViewControllerz.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2010B72444F38300DD8FB9 /* FeesAndChargesViewControllerz.swift */; };
+		EA2010C02444F38300DD8FB9 /* LegislativeViewControllerz.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2010B82444F38300DD8FB9 /* LegislativeViewControllerz.swift */; };
+		EA2010C12444F38300DD8FB9 /* GeneralViewControllerz.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2010B92444F38300DD8FB9 /* GeneralViewControllerz.swift */; };
+		EA2010C22444F38300DD8FB9 /* StatutesAndActsViewControllerz.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2010BA2444F38300DD8FB9 /* StatutesAndActsViewControllerz.swift */; };
 		EA3142272210A57D00FFBB5C /* InvestigationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3142262210A57D00FFBB5C /* InvestigationsViewController.swift */; };
 		EA349C78223C4C130055CB7D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA349C77223C4C130055CB7D /* LoginViewController.swift */; };
 		EA492A7E224F845B0060E37A /* HomeTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA492A7D224F845B0060E37A /* HomeTwoViewController.swift */; };
@@ -21,16 +31,41 @@
 		EA5B1B12220E0E4B00B77C04 /* ActualHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1B11220E0E4B00B77C04 /* ActualHomeViewController.swift */; };
 		EA5B1B14220E0EE300B77C04 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1B13220E0EE300B77C04 /* HomeTableViewCell.swift */; };
 		EA5B1B16220E0FC000B77C04 /* HomePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B1B15220E0FC000B77C04 /* HomePost.swift */; };
+		EA609F4C2436F34100A9F309 /* RegulationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA609F4B2436F34100A9F309 /* RegulationsTableViewCell.swift */; };
+		EA609F4E2436F50000A9F309 /* RegulationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA609F4D2436F50000A9F309 /* RegulationDetailViewController.swift */; };
+		EA609F502436F57D00A9F309 /* RegulateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA609F4F2436F57D00A9F309 /* RegulateViewController.swift */; };
+		EA609F522436F6AB00A9F309 /* RegulationOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA609F512436F6AB00A9F309 /* RegulationOverviewViewController.swift */; };
+		EA609F542436F6C300A9F309 /* RegulationClausesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA609F532436F6C300A9F309 /* RegulationClausesViewController.swift */; };
+		EA69ED2022D5CDBA007C46D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA69ED1F22D5CDB9007C46D2 /* GoogleService-Info.plist */; };
 		EA6BA85722174A780066A9A6 /* ComplaintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6BA85622174A780066A9A6 /* ComplaintViewController.swift */; };
 		EA7607EF224FFB8500D5B125 /* WebTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7607EE224FFB8500D5B125 /* WebTestViewController.swift */; };
 		EA7607F1224FFCD900D5B125 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7607F0224FFCD900D5B125 /* WebKit.framework */; };
+		EA762C8524401542001650E2 /* ClosedConsultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA762C8424401542001650E2 /* ClosedConsultTableViewCell.swift */; };
+		EA762C8724401E59001650E2 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA762C8624401E59001650E2 /* CommentViewController.swift */; };
+		EA762C892440932A001650E2 /* MoreOnRegulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA762C882440932A001650E2 /* MoreOnRegulationViewController.swift */; };
+		EA762C8B24409D7B001650E2 /* ClauseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA762C8A24409D7B001650E2 /* ClauseTableViewCell.swift */; };
 		EA7794012278B678008B635C /* SayItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7794002278B678008B635C /* SayItemViewController.swift */; };
 		EA7794032278B690008B635C /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7794022278B690008B635C /* CommentsViewController.swift */; };
 		EA793A5C22A98B870001FCF6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA793A5B22A98B870001FCF6 /* RegisterViewController.swift */; };
+		EA7D5C0E2436B01F0014B221 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7D5C092436B01F0014B221 /* HomeTabViewController.swift */; };
+		EA7D5C0F2436B01F0014B221 /* CalanderdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7D5C0A2436B01F0014B221 /* CalanderdViewController.swift */; };
+		EA7D5C102436B01F0014B221 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7D5C0B2436B01F0014B221 /* SearchResultViewController.swift */; };
+		EA7D5C112436B01F0014B221 /* HomedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7D5C0C2436B01F0014B221 /* HomedViewController.swift */; };
+		EA7D5C122436B01F0014B221 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7D5C0D2436B01F0014B221 /* SearchResultTableViewCell.swift */; };
+		EA7D5C142436C1B20014B221 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7D5C132436C1B20014B221 /* MenuTableViewController.swift */; };
+		EA81D77A244B979C00ADCF54 /* ClauseDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81D779244B979C00ADCF54 /* ClauseDetailsTableViewController.swift */; };
 		EA81E26F226B31DE003572D6 /* ByLawsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81E26E226B31DE003572D6 /* ByLawsViewController.swift */; };
 		EA81E271226B31EF003572D6 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81E270226B31EF003572D6 /* GeneralViewController.swift */; };
-		EA81E273226B3204003572D6 /* PoliciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81E272226B3204003572D6 /* PoliciesViewController.swift */; };
+		EA81E273226B3204003572D6 /* RegulatoryNoticesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81E272226B3204003572D6 /* RegulatoryNoticesViewController.swift */; };
 		EA81E275226B4E6D003572D6 /* MoreOnPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA81E274226B4E6D003572D6 /* MoreOnPolicyViewController.swift */; };
+		EA82358D24438E3500E84A02 /* PriorCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82358C24438E3500E84A02 /* PriorCommentViewController.swift */; };
+		EA8290332441E98400801F66 /* DiscussionForumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8290322441E98400801F66 /* DiscussionForumViewController.swift */; };
+		EA8290352441EB2C00801F66 /* DiscussionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8290342441EB2C00801F66 /* DiscussionTableViewCell.swift */; };
+		EA8290372441F62A00801F66 /* DiscussionPoliciesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8290362441F62A00801F66 /* DiscussionPoliciesTableViewCell.swift */; };
+		EA8290392441F63D00801F66 /* DiscussionPoliciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8290382441F63D00801F66 /* DiscussionPoliciesViewController.swift */; };
+		EA82903B24422DE700801F66 /* ForumTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82903A24422DE700801F66 /* ForumTabViewController.swift */; };
+		EA82903D24422E7E00801F66 /* ForumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82903C24422E7E00801F66 /* ForumTableViewController.swift */; };
+		EA82903F2442366100801F66 /* ForumCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82903E2442366100801F66 /* ForumCommentViewController.swift */; };
 		EA962DD422058B1700E805A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA962DD322058B1700E805A0 /* AppDelegate.swift */; };
 		EA962DD622058B1700E805A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA962DD522058B1700E805A0 /* ViewController.swift */; };
 		EA962DD922058B1700E805A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA962DD722058B1700E805A0 /* Main.storyboard */; };
@@ -39,16 +74,19 @@
 		EA962DE6220592F200E805A0 /* LegislativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA962DE5220592F200E805A0 /* LegislativeViewController.swift */; };
 		EA962DE82205986D00E805A0 /* BasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA962DE72205986D00E805A0 /* BasicTableViewCell.swift */; };
 		EA962DEA22059A6100E805A0 /* BasicPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA962DE922059A6100E805A0 /* BasicPost.swift */; };
+		EA96C0C322CD06F900480A71 /* AboutBCPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA96C0C222CD06F900480A71 /* AboutBCPViewController.swift */; };
+		EA96C0C522CD2F0C00480A71 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA96C0C422CD2F0C00480A71 /* TermsViewController.swift */; };
 		EAAB4775227A204500A3F3AF /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAB4774227A204500A3F3AF /* CommentTableViewCell.swift */; };
 		EAAD39DE220B2B0500011A53 /* ParticipateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD39DD220B2B0500011A53 /* ParticipateViewController.swift */; };
 		EAAD39E0220B2E8300011A53 /* CCalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD39DF220B2E8300011A53 /* CCalenderViewController.swift */; };
-		EAAD39E2220B2E9900011A53 /* UConsultationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD39E1220B2E9900011A53 /* UConsultationsViewController.swift */; };
-		EAAD39E4220B2F1400011A53 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD39E3220B2F1400011A53 /* InterestsViewController.swift */; };
-		EAAD39E6220B2F2D00011A53 /* CConsultationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD39E5220B2F2D00011A53 /* CConsultationsViewController.swift */; };
+		EAAD39E2220B2E9900011A53 /* CurrentConsultationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD39E1220B2E9900011A53 /* CurrentConsultationsViewController.swift */; };
+		EAAD39E4220B2F1400011A53 /* MyInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD39E3220B2F1400011A53 /* MyInterestsViewController.swift */; };
+		EAAD39E6220B2F2D00011A53 /* ClosedConsultationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD39E5220B2F2D00011A53 /* ClosedConsultationsViewController.swift */; };
 		EAAD39E8220B416400011A53 /* ConsultationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD39E7220B416400011A53 /* ConsultationTableViewCell.swift */; };
 		EAAD39EA220B4AB200011A53 /* MoreDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD39E9220B4AB200011A53 /* MoreDetailsViewController.swift */; };
 		EAAD39EC220C18CF00011A53 /* PagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD39EB220C18CF00011A53 /* PagesTableViewCell.swift */; };
 		EAAD39EE220C18E000011A53 /* PagesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD39ED220C18E000011A53 /* PagesData.swift */; };
+		EAB1E86424377396007FFD86 /* StatutesAndActsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1E86324377396007FFD86 /* StatutesAndActsViewController.swift */; };
 		EAC479F822120220009B5630 /* ResponsesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC479F722120220009B5630 /* ResponsesViewController.swift */; };
 		EAC479FA22141FB9009B5630 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC479F922141FB9009B5630 /* NotificationsViewController.swift */; };
 		EAC479FD221421E3009B5630 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC479FC221421E3009B5630 /* NotificationTableViewCell.swift */; };
@@ -57,32 +95,47 @@
 		EAC47A042214A104009B5630 /* PandSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC47A032214A104009B5630 /* PandSTableViewCell.swift */; };
 		EAC47A062214A138009B5630 /* PollsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC47A052214A138009B5630 /* PollsViewController.swift */; };
 		EAC47A082214A1E2009B5630 /* PollData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC47A072214A1E2009B5630 /* PollData.swift */; };
+		EAC87F0B243E5084005BA320 /* HomedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC87F0A243E5084005BA320 /* HomedTableViewCell.swift */; };
+		EAC87F0D243E8C8B005BA320 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC87F0C243E8C8B005BA320 /* SettingsViewController.swift */; };
 		EACB1083222977EF0079D79D /* LoginInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACB1082222977EF0079D79D /* LoginInterestsViewController.swift */; };
 		EACB10852229797E0079D79D /* LoginInterestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACB10842229797E0079D79D /* LoginInterestTableViewCell.swift */; };
 		EACB108722297A460079D79D /* InterestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACB108622297A460079D79D /* InterestModel.swift */; };
 		EAE14BD5223F9E47008A46C8 /* StructsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE14BD4223F9E47008A46C8 /* StructsFile.swift */; };
+		EAE8F6AC243F7A120025DCB0 /* AboutSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8F6AB243F7A120025DCB0 /* AboutSectionViewController.swift */; };
+		EAE8F6B2243FA3930025DCB0 /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE8F6B1243FA3930025DCB0 /* TermsAndConditionsViewController.swift */; };
 		EAEB0FDD2270E6C600CD1EB5 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB0FDC2270E6C600CD1EB5 /* AccountViewController.swift */; };
 		EAEB0FDF2270E70C00CD1EB5 /* InterestsEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB0FDE2270E70C00CD1EB5 /* InterestsEditViewController.swift */; };
-		EAEB0FE12270E72800CD1EB5 /* AccountEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB0FE02270E72800CD1EB5 /* AccountEditViewController.swift */; };
-		EAEB0FE32270E73700CD1EB5 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB0FE22270E73700CD1EB5 /* OverviewViewController.swift */; };
+		EAEB0FE12270E72800CD1EB5 /* TermsofUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB0FE02270E72800CD1EB5 /* TermsofUseViewController.swift */; };
+		EAEB0FE32270E73700CD1EB5 /* PrivacyStatementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB0FE22270E73700CD1EB5 /* PrivacyStatementViewController.swift */; };
 		EAEB0FE52270E74A00CD1EB5 /* InterestEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB0FE42270E74A00CD1EB5 /* InterestEditTableViewCell.swift */; };
 		EAEED3482272F12D00485411 /* SayDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEED3472272F12D00485411 /* SayDetailsViewController.swift */; };
 		EAF1CD4C22203A200045424D /* FAQsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF1CD4B22203A200045424D /* FAQsViewController.swift */; };
 		EAF6F084229432570082FEB5 /* DocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF6F083229432570082FEB5 /* DocumentTableViewCell.swift */; };
 		EAF6F087229461660082FEB5 /* Ghana_Business_Consultation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAF6F085229461650082FEB5 /* Ghana_Business_Consultation.xcdatamodeld */; };
 		EAF6F08922954BD00082FEB5 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF6F08822954BD00082FEB5 /* AppConstants.swift */; };
+		EAF9A679243E2DFF00467B5E /* AdministrativeDirectiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF9A678243E2DFF00467B5E /* AdministrativeDirectiveViewController.swift */; };
 		EAFCDCF7220E9F6700EE4AAC /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFCDCF6220E9F6700EE4AAC /* extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48066EDE22AD9C72004A020B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		48066EE122AD9CEC004A020B /* DownloadedDocuments+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DownloadedDocuments+CoreDataClass.swift"; sourceTree = "<group>"; };
+		48066EE222AD9CEC004A020B /* DownloadedDocuments+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DownloadedDocuments+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4EEE79EA24E72779AB353F8F /* Pods-BCP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BCP/Pods-BCP.debug.xcconfig"; sourceTree = "<group>"; };
 		5B79ABA67DC0149BCACA57FB /* Pods-BCP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCP.release.xcconfig"; path = "Pods/Target Support Files/Pods-BCP/Pods-BCP.release.xcconfig"; sourceTree = "<group>"; };
 		DDE1B1D6A9A682DD6C2E4C4E /* Pods_BCP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BCP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0C84622267908D00B30306 /* YourSayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourSayViewController.swift; sourceTree = "<group>"; };
 		EA0C8464226791F100B30306 /* SayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayTableViewCell.swift; sourceTree = "<group>"; };
-		EA177E6122071BA7005371B0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		EA177E6422071ECB005371B0 /* AdministrativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdministrativeViewController.swift; sourceTree = "<group>"; };
-		EA177E6622071ED7005371B0 /* RegulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegulationsViewController.swift; sourceTree = "<group>"; };
+		EA177E6122071BA7005371B0 /* RegulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegulationsViewController.swift; sourceTree = "<group>"; };
+		EA177E6622071ED7005371B0 /* FeesAndChargesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeesAndChargesViewController.swift; sourceTree = "<group>"; };
+		EA2010B32444F38300DD8FB9 /* RegulatoryNoticesViewControllerz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegulatoryNoticesViewControllerz.swift; sourceTree = "<group>"; };
+		EA2010B42444F38300DD8FB9 /* AdministrativeDirectiveViewControllerz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdministrativeDirectiveViewControllerz.swift; sourceTree = "<group>"; };
+		EA2010B52444F38300DD8FB9 /* ByLawsViewControllerz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByLawsViewControllerz.swift; sourceTree = "<group>"; };
+		EA2010B62444F38300DD8FB9 /* RegulationsViewControllerz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegulationsViewControllerz.swift; sourceTree = "<group>"; };
+		EA2010B72444F38300DD8FB9 /* FeesAndChargesViewControllerz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeesAndChargesViewControllerz.swift; sourceTree = "<group>"; };
+		EA2010B82444F38300DD8FB9 /* LegislativeViewControllerz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegislativeViewControllerz.swift; sourceTree = "<group>"; };
+		EA2010B92444F38300DD8FB9 /* GeneralViewControllerz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralViewControllerz.swift; sourceTree = "<group>"; };
+		EA2010BA2444F38300DD8FB9 /* StatutesAndActsViewControllerz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatutesAndActsViewControllerz.swift; sourceTree = "<group>"; };
 		EA3142262210A57D00FFBB5C /* InvestigationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestigationsViewController.swift; sourceTree = "<group>"; };
 		EA349C77223C4C130055CB7D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA492A7D224F845B0060E37A /* HomeTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTwoViewController.swift; sourceTree = "<group>"; };
@@ -91,17 +144,42 @@
 		EA5B1B11220E0E4B00B77C04 /* ActualHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualHomeViewController.swift; sourceTree = "<group>"; };
 		EA5B1B13220E0EE300B77C04 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		EA5B1B15220E0FC000B77C04 /* HomePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePost.swift; sourceTree = "<group>"; };
+		EA609F4B2436F34100A9F309 /* RegulationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegulationsTableViewCell.swift; sourceTree = "<group>"; };
+		EA609F4D2436F50000A9F309 /* RegulationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegulationDetailViewController.swift; sourceTree = "<group>"; };
+		EA609F4F2436F57D00A9F309 /* RegulateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegulateViewController.swift; sourceTree = "<group>"; };
+		EA609F512436F6AB00A9F309 /* RegulationOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegulationOverviewViewController.swift; sourceTree = "<group>"; };
+		EA609F532436F6C300A9F309 /* RegulationClausesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegulationClausesViewController.swift; sourceTree = "<group>"; };
+		EA69ED1F22D5CDB9007C46D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA6BA85622174A780066A9A6 /* ComplaintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintViewController.swift; sourceTree = "<group>"; };
 		EA7607EE224FFB8500D5B125 /* WebTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebTestViewController.swift; sourceTree = "<group>"; };
 		EA7607F0224FFCD900D5B125 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		EA762C8424401542001650E2 /* ClosedConsultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedConsultTableViewCell.swift; sourceTree = "<group>"; };
+		EA762C8624401E59001650E2 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		EA762C882440932A001650E2 /* MoreOnRegulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreOnRegulationViewController.swift; sourceTree = "<group>"; };
+		EA762C8A24409D7B001650E2 /* ClauseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClauseTableViewCell.swift; sourceTree = "<group>"; };
 		EA7794002278B678008B635C /* SayItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayItemViewController.swift; sourceTree = "<group>"; };
 		EA7794022278B690008B635C /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		EA793A5B22A98B870001FCF6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		EA7D5C092436B01F0014B221 /* HomeTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
+		EA7D5C0A2436B01F0014B221 /* CalanderdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalanderdViewController.swift; sourceTree = "<group>"; };
+		EA7D5C0B2436B01F0014B221 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		EA7D5C0C2436B01F0014B221 /* HomedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomedViewController.swift; sourceTree = "<group>"; };
+		EA7D5C0D2436B01F0014B221 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		EA7D5C132436C1B20014B221 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		EA81D779244B979C00ADCF54 /* ClauseDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClauseDetailsTableViewController.swift; sourceTree = "<group>"; };
 		EA81E26E226B31DE003572D6 /* ByLawsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByLawsViewController.swift; sourceTree = "<group>"; };
 		EA81E270226B31EF003572D6 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
-		EA81E272226B3204003572D6 /* PoliciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliciesViewController.swift; sourceTree = "<group>"; };
+		EA81E272226B3204003572D6 /* RegulatoryNoticesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegulatoryNoticesViewController.swift; sourceTree = "<group>"; };
 		EA81E274226B4E6D003572D6 /* MoreOnPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreOnPolicyViewController.swift; sourceTree = "<group>"; };
-		EA962DD022058B1700E805A0 /* BCP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BCP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA82358C24438E3500E84A02 /* PriorCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorCommentViewController.swift; sourceTree = "<group>"; };
+		EA8290322441E98400801F66 /* DiscussionForumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionForumViewController.swift; sourceTree = "<group>"; };
+		EA8290342441EB2C00801F66 /* DiscussionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionTableViewCell.swift; sourceTree = "<group>"; };
+		EA8290362441F62A00801F66 /* DiscussionPoliciesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionPoliciesTableViewCell.swift; sourceTree = "<group>"; };
+		EA8290382441F63D00801F66 /* DiscussionPoliciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionPoliciesViewController.swift; sourceTree = "<group>"; };
+		EA82903A24422DE700801F66 /* ForumTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumTabViewController.swift; sourceTree = "<group>"; };
+		EA82903C24422E7E00801F66 /* ForumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumTableViewController.swift; sourceTree = "<group>"; };
+		EA82903E2442366100801F66 /* ForumCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumCommentViewController.swift; sourceTree = "<group>"; };
+		EA962DD022058B1700E805A0 /* BRR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA962DD322058B1700E805A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA962DD522058B1700E805A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA962DD822058B1700E805A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,16 +189,19 @@
 		EA962DE5220592F200E805A0 /* LegislativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegislativeViewController.swift; sourceTree = "<group>"; };
 		EA962DE72205986D00E805A0 /* BasicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewCell.swift; sourceTree = "<group>"; };
 		EA962DE922059A6100E805A0 /* BasicPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPost.swift; sourceTree = "<group>"; };
+		EA96C0C222CD06F900480A71 /* AboutBCPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutBCPViewController.swift; sourceTree = "<group>"; };
+		EA96C0C422CD2F0C00480A71 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		EAAB4774227A204500A3F3AF /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		EAAD39DD220B2B0500011A53 /* ParticipateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipateViewController.swift; sourceTree = "<group>"; };
 		EAAD39DF220B2E8300011A53 /* CCalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCalenderViewController.swift; sourceTree = "<group>"; };
-		EAAD39E1220B2E9900011A53 /* UConsultationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UConsultationsViewController.swift; sourceTree = "<group>"; };
-		EAAD39E3220B2F1400011A53 /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
-		EAAD39E5220B2F2D00011A53 /* CConsultationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CConsultationsViewController.swift; sourceTree = "<group>"; };
+		EAAD39E1220B2E9900011A53 /* CurrentConsultationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConsultationsViewController.swift; sourceTree = "<group>"; };
+		EAAD39E3220B2F1400011A53 /* MyInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInterestsViewController.swift; sourceTree = "<group>"; };
+		EAAD39E5220B2F2D00011A53 /* ClosedConsultationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedConsultationsViewController.swift; sourceTree = "<group>"; };
 		EAAD39E7220B416400011A53 /* ConsultationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationTableViewCell.swift; sourceTree = "<group>"; };
 		EAAD39E9220B4AB200011A53 /* MoreDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDetailsViewController.swift; sourceTree = "<group>"; };
 		EAAD39EB220C18CF00011A53 /* PagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesTableViewCell.swift; sourceTree = "<group>"; };
 		EAAD39ED220C18E000011A53 /* PagesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesData.swift; sourceTree = "<group>"; };
+		EAB1E86324377396007FFD86 /* StatutesAndActsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatutesAndActsViewController.swift; sourceTree = "<group>"; };
 		EAC479F722120220009B5630 /* ResponsesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsesViewController.swift; sourceTree = "<group>"; };
 		EAC479F922141FB9009B5630 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		EAC479FC221421E3009B5630 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
@@ -129,14 +210,18 @@
 		EAC47A032214A104009B5630 /* PandSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PandSTableViewCell.swift; sourceTree = "<group>"; };
 		EAC47A052214A138009B5630 /* PollsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollsViewController.swift; sourceTree = "<group>"; };
 		EAC47A072214A1E2009B5630 /* PollData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollData.swift; sourceTree = "<group>"; };
+		EAC87F0A243E5084005BA320 /* HomedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomedTableViewCell.swift; sourceTree = "<group>"; };
+		EAC87F0C243E8C8B005BA320 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EACB1082222977EF0079D79D /* LoginInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInterestsViewController.swift; sourceTree = "<group>"; };
 		EACB10842229797E0079D79D /* LoginInterestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInterestTableViewCell.swift; sourceTree = "<group>"; };
 		EACB108622297A460079D79D /* InterestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestModel.swift; sourceTree = "<group>"; };
 		EAE14BD4223F9E47008A46C8 /* StructsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructsFile.swift; sourceTree = "<group>"; };
+		EAE8F6AB243F7A120025DCB0 /* AboutSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSectionViewController.swift; sourceTree = "<group>"; };
+		EAE8F6B1243FA3930025DCB0 /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		EAEB0FDC2270E6C600CD1EB5 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		EAEB0FDE2270E70C00CD1EB5 /* InterestsEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsEditViewController.swift; sourceTree = "<group>"; };
-		EAEB0FE02270E72800CD1EB5 /* AccountEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountEditViewController.swift; sourceTree = "<group>"; };
-		EAEB0FE22270E73700CD1EB5 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		EAEB0FE02270E72800CD1EB5 /* TermsofUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsofUseViewController.swift; sourceTree = "<group>"; };
+		EAEB0FE22270E73700CD1EB5 /* PrivacyStatementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyStatementViewController.swift; sourceTree = "<group>"; };
 		EAEB0FE42270E74A00CD1EB5 /* InterestEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestEditTableViewCell.swift; sourceTree = "<group>"; };
 		EAEED3472272F12D00485411 /* SayDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayDetailsViewController.swift; sourceTree = "<group>"; };
 		EAEFCB5E224028AA00C88305 /* BCP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BCP.entitlements; sourceTree = "<group>"; };
@@ -144,7 +229,8 @@
 		EAF6F083229432570082FEB5 /* DocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTableViewCell.swift; sourceTree = "<group>"; };
 		EAF6F086229461660082FEB5 /* Ghana_Business_Consultation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ghana_Business_Consultation.xcdatamodel; sourceTree = "<group>"; };
 		EAF6F08822954BD00082FEB5 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		EAFCDCF6220E9F6700EE4AAC /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		EAF9A678243E2DFF00467B5E /* AdministrativeDirectiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdministrativeDirectiveViewController.swift; sourceTree = "<group>"; };
+		EAFCDCF6220E9F6700EE4AAC /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = extensions.swift; path = Participate/extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +255,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		48066EE022AD9CC7004A020B /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				48066EE122AD9CEC004A020B /* DownloadedDocuments+CoreDataClass.swift */,
+				48066EE222AD9CEC004A020B /* DownloadedDocuments+CoreDataProperties.swift */,
+				EAF6F085229461650082FEB5 /* Ghana_Business_Consultation.xcdatamodeld */,
+				48066EDE22AD9C72004A020B /* CoreDataManager.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
 		5FF8FA61C2E77B59A6FB97DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,22 +275,38 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		EA177E6322071EB7005371B0 /* Read */ = {
+		EA177E6322071EB7005371B0 /* Regulations */ = {
 			isa = PBXGroup;
 			children = (
 				EA962DE922059A6100E805A0 /* BasicPost.swift */,
 				EA962DE72205986D00E805A0 /* BasicTableViewCell.swift */,
-				EA177E6122071BA7005371B0 /* HomeViewController.swift */,
+				EA177E6122071BA7005371B0 /* RegulationsViewController.swift */,
 				EA962DE5220592F200E805A0 /* LegislativeViewController.swift */,
-				EA177E6422071ECB005371B0 /* AdministrativeViewController.swift */,
-				EA177E6622071ED7005371B0 /* RegulationsViewController.swift */,
+				EA177E6622071ED7005371B0 /* FeesAndChargesViewController.swift */,
 				EA81E26E226B31DE003572D6 /* ByLawsViewController.swift */,
 				EA81E270226B31EF003572D6 /* GeneralViewController.swift */,
-				EA81E272226B3204003572D6 /* PoliciesViewController.swift */,
+				EA81E272226B3204003572D6 /* RegulatoryNoticesViewController.swift */,
 				EA81E274226B4E6D003572D6 /* MoreOnPolicyViewController.swift */,
 				EAF6F083229432570082FEB5 /* DocumentTableViewCell.swift */,
+				EAB1E86324377396007FFD86 /* StatutesAndActsViewController.swift */,
+				EAF9A678243E2DFF00467B5E /* AdministrativeDirectiveViewController.swift */,
 			);
-			path = Read;
+			path = Regulations;
+			sourceTree = "<group>";
+		};
+		EA2010B22444F38300DD8FB9 /* RegulationsFromTabs */ = {
+			isa = PBXGroup;
+			children = (
+				EA2010B32444F38300DD8FB9 /* RegulatoryNoticesViewControllerz.swift */,
+				EA2010B42444F38300DD8FB9 /* AdministrativeDirectiveViewControllerz.swift */,
+				EA2010B52444F38300DD8FB9 /* ByLawsViewControllerz.swift */,
+				EA2010B62444F38300DD8FB9 /* RegulationsViewControllerz.swift */,
+				EA2010B72444F38300DD8FB9 /* FeesAndChargesViewControllerz.swift */,
+				EA2010B82444F38300DD8FB9 /* LegislativeViewControllerz.swift */,
+				EA2010B92444F38300DD8FB9 /* GeneralViewControllerz.swift */,
+				EA2010BA2444F38300DD8FB9 /* StatutesAndActsViewControllerz.swift */,
+			);
+			path = RegulationsFromTabs;
 			sourceTree = "<group>";
 		};
 		EA3142252210A54300FFBB5C /* Investigations */ = {
@@ -204,6 +317,34 @@
 				EA6BA85622174A780066A9A6 /* ComplaintViewController.swift */,
 			);
 			path = Investigations;
+			sourceTree = "<group>";
+		};
+		EA7D5C082436B01F0014B221 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				EA7D5C092436B01F0014B221 /* HomeTabViewController.swift */,
+				EA7D5C0A2436B01F0014B221 /* CalanderdViewController.swift */,
+				EA7D5C0B2436B01F0014B221 /* SearchResultViewController.swift */,
+				EA7D5C0C2436B01F0014B221 /* HomedViewController.swift */,
+				EA7D5C0D2436B01F0014B221 /* SearchResultTableViewCell.swift */,
+				EA7D5C132436C1B20014B221 /* MenuTableViewController.swift */,
+				EA609F4B2436F34100A9F309 /* RegulationsTableViewCell.swift */,
+				EA609F4D2436F50000A9F309 /* RegulationDetailViewController.swift */,
+				EA609F4F2436F57D00A9F309 /* RegulateViewController.swift */,
+				EA609F512436F6AB00A9F309 /* RegulationOverviewViewController.swift */,
+				EA609F532436F6C300A9F309 /* RegulationClausesViewController.swift */,
+				EAC87F0A243E5084005BA320 /* HomedTableViewCell.swift */,
+				EAC87F0C243E8C8B005BA320 /* SettingsViewController.swift */,
+				EAE8F6AB243F7A120025DCB0 /* AboutSectionViewController.swift */,
+				EAEB0FE22270E73700CD1EB5 /* PrivacyStatementViewController.swift */,
+				EAEB0FE02270E72800CD1EB5 /* TermsofUseViewController.swift */,
+				EAE8F6B1243FA3930025DCB0 /* TermsAndConditionsViewController.swift */,
+				EA762C8624401E59001650E2 /* CommentViewController.swift */,
+				EA762C882440932A001650E2 /* MoreOnRegulationViewController.swift */,
+				EA762C8A24409D7B001650E2 /* ClauseTableViewCell.swift */,
+				EA81D779244B979C00ADCF54 /* ClauseDetailsTableViewController.swift */,
+			);
+			path = New;
 			sourceTree = "<group>";
 		};
 		EA962DC722058B1700E805A0 = {
@@ -219,7 +360,7 @@
 		EA962DD122058B1700E805A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA962DD022058B1700E805A0 /* BCP.app */,
+				EA962DD022058B1700E805A0 /* BRR.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,6 +368,8 @@
 		EA962DD222058B1700E805A0 /* BCP */ = {
 			isa = PBXGroup;
 			children = (
+				EA7D5C082436B01F0014B221 /* New */,
+				48066EE022AD9CC7004A020B /* DataBase */,
 				EAEFCB5E224028AA00C88305 /* BCP.entitlements */,
 				EAC47A022214A0CF009B5630 /* PollsandSurveys */,
 				EA962DD322058B1700E805A0 /* AppDelegate.swift */,
@@ -234,17 +377,19 @@
 				EA962DDA22058B1900E805A0 /* Assets.xcassets */,
 				EA962DDC22058B1900E805A0 /* LaunchScreen.storyboard */,
 				EA962DDF22058B1900E805A0 /* Info.plist */,
+				EA69ED1F22D5CDB9007C46D2 /* GoogleService-Info.plist */,
+				EA2010B22444F38300DD8FB9 /* RegulationsFromTabs */,
 				EAEED3462272EF2800485411 /* YourSay */,
 				EAEB0FDB2270E60B00CD1EB5 /* Account */,
 				EAC479FB221421B1009B5630 /* Others */,
 				EA3142252210A54300FFBB5C /* Investigations */,
 				EAAD39DC220B2AD600011A53 /* Participate */,
-				EA177E6322071EB7005371B0 /* Read */,
+				EA177E6322071EB7005371B0 /* Regulations */,
 				EAE14BD4223F9E47008A46C8 /* StructsFile.swift */,
+				EAFCDCF6220E9F6700EE4AAC /* extensions.swift */,
 				EA59F110224A137900077840 /* SpinnerViewController.swift */,
 				EA492A7D224F845B0060E37A /* HomeTwoViewController.swift */,
 				EA7607EE224FFB8500D5B125 /* WebTestViewController.swift */,
-				EAF6F085229461650082FEB5 /* Ghana_Business_Consultation.xcdatamodeld */,
 				EAF6F08822954BD00082FEB5 /* AppConstants.swift */,
 			);
 			path = BCP;
@@ -255,14 +400,15 @@
 			children = (
 				EAAD39DD220B2B0500011A53 /* ParticipateViewController.swift */,
 				EAAD39DF220B2E8300011A53 /* CCalenderViewController.swift */,
-				EAAD39E1220B2E9900011A53 /* UConsultationsViewController.swift */,
-				EAAD39E3220B2F1400011A53 /* InterestsViewController.swift */,
-				EAAD39E5220B2F2D00011A53 /* CConsultationsViewController.swift */,
+				EAAD39E1220B2E9900011A53 /* CurrentConsultationsViewController.swift */,
+				EAAD39E3220B2F1400011A53 /* MyInterestsViewController.swift */,
+				EAAD39E5220B2F2D00011A53 /* ClosedConsultationsViewController.swift */,
 				EAAD39E7220B416400011A53 /* ConsultationTableViewCell.swift */,
 				EAAD39E9220B4AB200011A53 /* MoreDetailsViewController.swift */,
 				EAAD39EB220C18CF00011A53 /* PagesTableViewCell.swift */,
 				EAAD39ED220C18E000011A53 /* PagesData.swift */,
 				EAC47A0022149D0E009B5630 /* InterestTableViewCell.swift */,
+				EA762C8424401542001650E2 /* ClosedConsultTableViewCell.swift */,
 			);
 			path = Participate;
 			sourceTree = "<group>";
@@ -273,7 +419,6 @@
 				EA5B1B11220E0E4B00B77C04 /* ActualHomeViewController.swift */,
 				EA5B1B13220E0EE300B77C04 /* HomeTableViewCell.swift */,
 				EA5B1B15220E0FC000B77C04 /* HomePost.swift */,
-				EAFCDCF6220E9F6700EE4AAC /* extensions.swift */,
 				EA962DD522058B1700E805A0 /* ViewController.swift */,
 				EAC479F922141FB9009B5630 /* NotificationsViewController.swift */,
 				EAC479FC221421E3009B5630 /* NotificationTableViewCell.swift */,
@@ -285,6 +430,8 @@
 				EA349C77223C4C130055CB7D /* LoginViewController.swift */,
 				EA59F112224A1A4000077840 /* MenuViewController.swift */,
 				EA793A5B22A98B870001FCF6 /* RegisterViewController.swift */,
+				EA96C0C222CD06F900480A71 /* AboutBCPViewController.swift */,
+				EA96C0C422CD2F0C00480A71 /* TermsViewController.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -304,8 +451,6 @@
 			children = (
 				EAEB0FDC2270E6C600CD1EB5 /* AccountViewController.swift */,
 				EAEB0FDE2270E70C00CD1EB5 /* InterestsEditViewController.swift */,
-				EAEB0FE02270E72800CD1EB5 /* AccountEditViewController.swift */,
-				EAEB0FE22270E73700CD1EB5 /* OverviewViewController.swift */,
 				EAEB0FE42270E74A00CD1EB5 /* InterestEditTableViewCell.swift */,
 			);
 			path = Account;
@@ -320,6 +465,14 @@
 				EA7794002278B678008B635C /* SayItemViewController.swift */,
 				EA7794022278B690008B635C /* CommentsViewController.swift */,
 				EAAB4774227A204500A3F3AF /* CommentTableViewCell.swift */,
+				EA8290322441E98400801F66 /* DiscussionForumViewController.swift */,
+				EA8290342441EB2C00801F66 /* DiscussionTableViewCell.swift */,
+				EA8290362441F62A00801F66 /* DiscussionPoliciesTableViewCell.swift */,
+				EA8290382441F63D00801F66 /* DiscussionPoliciesViewController.swift */,
+				EA82903A24422DE700801F66 /* ForumTabViewController.swift */,
+				EA82903C24422E7E00801F66 /* ForumTableViewController.swift */,
+				EA82903E2442366100801F66 /* ForumCommentViewController.swift */,
+				EA82358C24438E3500E84A02 /* PriorCommentViewController.swift */,
 			);
 			path = YourSay;
 			sourceTree = "<group>";
@@ -343,7 +496,7 @@
 			);
 			name = BCP;
 			productName = BCP;
-			productReference = EA962DD022058B1700E805A0 /* BCP.app */;
+			productReference = EA962DD022058B1700E805A0 /* BRR.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -359,6 +512,9 @@
 					EA962DCF22058B1700E805A0 = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.InAppPurchase = {
 								enabled = 0;
 							};
@@ -396,6 +552,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA962DDE22058B1900E805A0 /* LaunchScreen.storyboard in Resources */,
+				EA69ED2022D5CDBA007C46D2 /* GoogleService-Info.plist in Resources */,
 				EA962DDB22058B1900E805A0 /* Assets.xcassets in Resources */,
 				EA962DD922058B1700E805A0 /* Main.storyboard in Resources */,
 			);
@@ -409,25 +566,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BCP/Pods-BCP-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
-				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
-				"${BUILT_PRODUCTS_DIR}/PageMenu/PageMenu.framework",
-				"${BUILT_PRODUCTS_DIR}/SideMenuSwift/SideMenuSwift.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BCP/Pods-BCP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PageMenu.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenuSwift.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BCP/Pods-BCP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -459,65 +603,107 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA82358D24438E3500E84A02 /* PriorCommentViewController.swift in Sources */,
 				EA349C78223C4C130055CB7D /* LoginViewController.swift in Sources */,
 				EA7794012278B678008B635C /* SayItemViewController.swift in Sources */,
 				EAAD39E0220B2E8300011A53 /* CCalenderViewController.swift in Sources */,
 				EAF6F08922954BD00082FEB5 /* AppConstants.swift in Sources */,
 				EAEB0FDD2270E6C600CD1EB5 /* AccountViewController.swift in Sources */,
 				EAC479FD221421E3009B5630 /* NotificationTableViewCell.swift in Sources */,
+				EA96C0C322CD06F900480A71 /* AboutBCPViewController.swift in Sources */,
 				EA5B1B12220E0E4B00B77C04 /* ActualHomeViewController.swift in Sources */,
 				EA962DE82205986D00E805A0 /* BasicTableViewCell.swift in Sources */,
+				EA7D5C112436B01F0014B221 /* HomedViewController.swift in Sources */,
 				EACB1083222977EF0079D79D /* LoginInterestsViewController.swift in Sources */,
 				EA59F111224A137900077840 /* SpinnerViewController.swift in Sources */,
 				EAEB0FDF2270E70C00CD1EB5 /* InterestsEditViewController.swift in Sources */,
+				EA2010BF2444F38300DD8FB9 /* FeesAndChargesViewControllerz.swift in Sources */,
 				EA59F113224A1A4000077840 /* MenuViewController.swift in Sources */,
 				EAAB4775227A204500A3F3AF /* CommentTableViewCell.swift in Sources */,
 				EACB108722297A460079D79D /* InterestModel.swift in Sources */,
-				EA177E6722071ED7005371B0 /* RegulationsViewController.swift in Sources */,
+				EA177E6722071ED7005371B0 /* FeesAndChargesViewController.swift in Sources */,
 				EA7794032278B690008B635C /* CommentsViewController.swift in Sources */,
 				EA81E26F226B31DE003572D6 /* ByLawsViewController.swift in Sources */,
-				EAAD39E2220B2E9900011A53 /* UConsultationsViewController.swift in Sources */,
-				EAAD39E4220B2F1400011A53 /* InterestsViewController.swift in Sources */,
+				EAAD39E2220B2E9900011A53 /* CurrentConsultationsViewController.swift in Sources */,
+				EAE8F6B2243FA3930025DCB0 /* TermsAndConditionsViewController.swift in Sources */,
+				EAAD39E4220B2F1400011A53 /* MyInterestsViewController.swift in Sources */,
+				EA7D5C0F2436B01F0014B221 /* CalanderdViewController.swift in Sources */,
 				EA5B1B14220E0EE300B77C04 /* HomeTableViewCell.swift in Sources */,
+				EAC87F0D243E8C8B005BA320 /* SettingsViewController.swift in Sources */,
 				EA962DEA22059A6100E805A0 /* BasicPost.swift in Sources */,
+				48066EE322AD9CEC004A020B /* DownloadedDocuments+CoreDataClass.swift in Sources */,
+				EA609F502436F57D00A9F309 /* RegulateViewController.swift in Sources */,
 				EAAD39EE220C18E000011A53 /* PagesData.swift in Sources */,
-				EA81E273226B3204003572D6 /* PoliciesViewController.swift in Sources */,
+				EA81E273226B3204003572D6 /* RegulatoryNoticesViewController.swift in Sources */,
 				EAEB0FE52270E74A00CD1EB5 /* InterestEditTableViewCell.swift in Sources */,
+				EA609F4E2436F50000A9F309 /* RegulationDetailViewController.swift in Sources */,
+				EA2010BD2444F38300DD8FB9 /* ByLawsViewControllerz.swift in Sources */,
 				EAAD39EC220C18CF00011A53 /* PagesTableViewCell.swift in Sources */,
 				EAAD39EA220B4AB200011A53 /* MoreDetailsViewController.swift in Sources */,
 				EAC47A042214A104009B5630 /* PandSTableViewCell.swift in Sources */,
+				EA7D5C102436B01F0014B221 /* SearchResultViewController.swift in Sources */,
+				EA762C8B24409D7B001650E2 /* ClauseTableViewCell.swift in Sources */,
+				EA762C8524401542001650E2 /* ClosedConsultTableViewCell.swift in Sources */,
+				EA7D5C0E2436B01F0014B221 /* HomeTabViewController.swift in Sources */,
+				EA2010C12444F38300DD8FB9 /* GeneralViewControllerz.swift in Sources */,
+				EA96C0C522CD2F0C00480A71 /* TermsViewController.swift in Sources */,
 				EAF6F087229461660082FEB5 /* Ghana_Business_Consultation.xcdatamodeld in Sources */,
 				EA3142272210A57D00FFBB5C /* InvestigationsViewController.swift in Sources */,
 				EA962DD622058B1700E805A0 /* ViewController.swift in Sources */,
+				EA2010C02444F38300DD8FB9 /* LegislativeViewControllerz.swift in Sources */,
+				EA82903B24422DE700801F66 /* ForumTabViewController.swift in Sources */,
+				EA81D77A244B979C00ADCF54 /* ClauseDetailsTableViewController.swift in Sources */,
+				EA7D5C142436C1B20014B221 /* MenuTableViewController.swift in Sources */,
+				EA609F522436F6AB00A9F309 /* RegulationOverviewViewController.swift in Sources */,
 				EA962DD422058B1700E805A0 /* AppDelegate.swift in Sources */,
 				EA6BA85722174A780066A9A6 /* ComplaintViewController.swift in Sources */,
-				EA177E6522071ECB005371B0 /* AdministrativeViewController.swift in Sources */,
+				EAF9A679243E2DFF00467B5E /* AdministrativeDirectiveViewController.swift in Sources */,
 				EAC47A0122149D0E009B5630 /* InterestTableViewCell.swift in Sources */,
 				EA81E275226B4E6D003572D6 /* MoreOnPolicyViewController.swift in Sources */,
 				EAC479FA22141FB9009B5630 /* NotificationsViewController.swift in Sources */,
-				EA177E6222071BA7005371B0 /* HomeViewController.swift in Sources */,
+				EA177E6222071BA7005371B0 /* RegulationsViewController.swift in Sources */,
+				EAB1E86424377396007FFD86 /* StatutesAndActsViewController.swift in Sources */,
 				EAC479FF22145E4C009B5630 /* Notifications.swift in Sources */,
-				EAEB0FE32270E73700CD1EB5 /* OverviewViewController.swift in Sources */,
+				EAEB0FE32270E73700CD1EB5 /* PrivacyStatementViewController.swift in Sources */,
 				EAAD39DE220B2B0500011A53 /* ParticipateViewController.swift in Sources */,
+				EA762C8724401E59001650E2 /* CommentViewController.swift in Sources */,
 				EAEED3482272F12D00485411 /* SayDetailsViewController.swift in Sources */,
+				EA609F4C2436F34100A9F309 /* RegulationsTableViewCell.swift in Sources */,
 				EACB10852229797E0079D79D /* LoginInterestTableViewCell.swift in Sources */,
+				EA8290332441E98400801F66 /* DiscussionForumViewController.swift in Sources */,
+				EAC87F0B243E5084005BA320 /* HomedTableViewCell.swift in Sources */,
 				EA5B1B16220E0FC000B77C04 /* HomePost.swift in Sources */,
+				48066EDF22AD9C72004A020B /* CoreDataManager.swift in Sources */,
 				EAFCDCF7220E9F6700EE4AAC /* extensions.swift in Sources */,
 				EAC47A082214A1E2009B5630 /* PollData.swift in Sources */,
 				EA0C8465226791F100B30306 /* SayTableViewCell.swift in Sources */,
+				EA762C892440932A001650E2 /* MoreOnRegulationViewController.swift in Sources */,
 				EA492A7E224F845B0060E37A /* HomeTwoViewController.swift in Sources */,
+				EAE8F6AC243F7A120025DCB0 /* AboutSectionViewController.swift in Sources */,
 				EA0C84632267908D00B30306 /* YourSayViewController.swift in Sources */,
-				EAEB0FE12270E72800CD1EB5 /* AccountEditViewController.swift in Sources */,
+				EA2010BB2444F38300DD8FB9 /* RegulatoryNoticesViewControllerz.swift in Sources */,
+				EA2010C22444F38300DD8FB9 /* StatutesAndActsViewControllerz.swift in Sources */,
+				EA2010BE2444F38300DD8FB9 /* RegulationsViewControllerz.swift in Sources */,
+				EA609F542436F6C300A9F309 /* RegulationClausesViewController.swift in Sources */,
+				EA7D5C122436B01F0014B221 /* SearchResultTableViewCell.swift in Sources */,
+				EAEB0FE12270E72800CD1EB5 /* TermsofUseViewController.swift in Sources */,
 				EAC47A062214A138009B5630 /* PollsViewController.swift in Sources */,
+				EA82903D24422E7E00801F66 /* ForumTableViewController.swift in Sources */,
 				EA7607EF224FFB8500D5B125 /* WebTestViewController.swift in Sources */,
 				EA793A5C22A98B870001FCF6 /* RegisterViewController.swift in Sources */,
 				EAF6F084229432570082FEB5 /* DocumentTableViewCell.swift in Sources */,
+				EA8290352441EB2C00801F66 /* DiscussionTableViewCell.swift in Sources */,
+				EA8290372441F62A00801F66 /* DiscussionPoliciesTableViewCell.swift in Sources */,
 				EA962DE6220592F200E805A0 /* LegislativeViewController.swift in Sources */,
+				EA8290392441F63D00801F66 /* DiscussionPoliciesViewController.swift in Sources */,
 				EAAD39E8220B416400011A53 /* ConsultationTableViewCell.swift in Sources */,
+				EA2010BC2444F38300DD8FB9 /* AdministrativeDirectiveViewControllerz.swift in Sources */,
 				EAE14BD5223F9E47008A46C8 /* StructsFile.swift in Sources */,
+				48066EE422AD9CEC004A020B /* DownloadedDocuments+CoreDataProperties.swift in Sources */,
+				EA82903F2442366100801F66 /* ForumCommentViewController.swift in Sources */,
 				EAF1CD4C22203A200045424D /* FAQsViewController.swift in Sources */,
 				EA81E271226B31EF003572D6 /* GeneralViewController.swift in Sources */,
-				EAAD39E6220B2F2D00011A53 /* CConsultationsViewController.swift in Sources */,
+				EAAD39E6220B2F2D00011A53 /* ClosedConsultationsViewController.swift in Sources */,
 				EAC479F822120220009B5630 /* ResponsesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,16 +853,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BCP/BCP.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4H8EN5N52L;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZURPJD42Z;
 				INFOPLIST_FILE = BCP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CasaDev.BCP;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.indexcom.casadev.BCP-Prod";
+				PRODUCT_NAME = BRR;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -687,16 +875,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BCP/BCP.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4H8EN5N52L;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZURPJD42Z;
 				INFOPLIST_FILE = BCP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CasaDev.BCP;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.indexcom.casadev.BCP-Prod";
+				PRODUCT_NAME = BRR;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
