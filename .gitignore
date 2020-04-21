@@ -2,3 +2,4 @@
 Podfile.lock
 Pods/
 BCP.xcworkspace
+*.xcworkspace
