@@ -18,6 +18,7 @@ class ClauseDetailsTableViewController: UITableViewController {
     @IBOutlet weak var penaltyLabel: UILabel!
     @IBOutlet weak var procedureLabel: UILabel!
     @IBOutlet weak var feeLabel: UILabel!
+    @IBOutlet weak var favBtn: UIButton!
     @IBOutlet var clauseTableView: UITableView!
     var clause: Clause?
     var incomingRegulation: Regulation?
@@ -25,18 +26,13 @@ class ClauseDetailsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if #available(iOS 13.0, *) {
-            let favBtn = UIBarButtonItem(image: UIImage(systemName: "love"), style: .plain, target: self, action: #selector(performClaseSave))
-            favBtn.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            self.navigationController?.navigationItem.rightBarButtonItem = favBtn
-//            self.navigationItem.rightBarButtonItem  = favBtn
-        } else {
-            // Fallback on earlier versions
-            let favBtn = UIBarButtonItem(image: UIImage(named: "love"), style: .plain, target: self, action: #selector(performClaseSave))
-            self.navigationItem.rightBarButtonItem  = favBtn
-        }
         
+        if AppConstants.sharedInstance.isFromFavs == true{
+            favBtn.isHidden = true
+        }
+        else {
+            favBtn.isHidden = false
+        }
         setUpView()
         print(clause)
         clauseTableView.rowHeight = UITableView.automaticDimension
@@ -51,14 +47,14 @@ class ClauseDetailsTableViewController: UITableViewController {
         if AppConstants.sharedInstance.clauseStatus == false {
             incomingRegulation = AppConstants.sharedInstance.regulate
             clause = AppConstants.sharedInstance.selectedClause
-            forumTitle.text = incomingRegulation?.regulation_title ?? "Not Available"
+            forumTitle.text = incomingRegulation?.regulation_title?.htmlToString ?? "Not Available"
             clauseBody.text = clause?.clause_details?.htmlToString ?? "Not Available"
-            subjectLabel.text = clause?.subject_name ?? "Not Available"
-            sectorLabel.text = clause?.sector_name ?? "Not Available"
-            clauseSummaryLabel.text = clause?.clause_summary ?? "Not Available"
-            penaltyLabel.text = clause?.clause_penalty ?? "Not Available"
-            feeLabel.text = clause?.clause_fee ?? "Not Available"
-            procedureLabel.text = clause?.clause_procedure ?? "Not Available"
+            subjectLabel.text = clause?.subject_name?.htmlToString ?? "Not Available"
+            sectorLabel.text = clause?.sector_name?.htmlToString ?? "Not Available"
+            clauseSummaryLabel.text = clause?.clause_summary?.htmlToString ?? "Not Available"
+            penaltyLabel.text = clause?.clause_penalty?.htmlToString ?? "Not Available"
+            feeLabel.text = clause?.clause_fee?.htmlToString ?? "Not Available"
+            procedureLabel.text = clause?.clause_procedure?.htmlToString ?? "Not Available"
             clauseTableView.reloadData()
         } else {
             incomingRegulations = AppConstants.sharedInstance.selectedsearch
@@ -73,6 +69,33 @@ class ClauseDetailsTableViewController: UITableViewController {
             procedureLabel.text = incomingRegulations?.clause_procedure?.htmlToString ?? "Not Available"
             clauseTableView.reloadData()
         }
+    }
+    @IBAction func favoriteBtnClicked(_ sender: Any) {
+        if AppConstants.sharedInstance.clauseStatus == false {
+            incomingRegulation = AppConstants.sharedInstance.regulate
+            clause = AppConstants.sharedInstance.selectedClause
+            CoreDataManager.sharedManager.saveClause(clause_id: clause?.clause_id ?? "Not Available", clause_title: incomingRegulation?.regulation_title?.htmlToString ?? "Not Available", clause_section: clause?.clause_section ?? "Not Available", clause_details: clause?.clause_details?.htmlToString ?? "Not Available", clause_summary: clause?.clause_summary?.htmlToString ?? "Not Available", clause_procedure: clause?.clause_procedure ?? "Not Available", clause_form: clause?.clause_form ?? "Not Available", clause_penalty: clause?.clause_penalty ?? "Not Available", sector_id: clause?.sector_id ?? "Not Available", sector_name: clause?.sector_name ?? "Not Available", subject_name: clause?.subject_name ?? "Not Available", date_added: Date(), clause_fee: clause?.clause_fee ?? "Not Available") { (err, res) in
+                if let error = err {
+                    
+                    self.showAlert(title: "Error", message: "There was an error adding the consultation to your favorites. Please contact the administrator.")
+                }
+                else{
+                    self.showAlert(title: "Successful", message: "The Clause has been added to your favorite clauses.")
+                }
+            }
+        } else {
+            incomingRegulations = AppConstants.sharedInstance.selectedsearch
+            CoreDataManager.sharedManager.saveClause(clause_id: incomingRegulations?.clause_id?.htmlToString ?? "Not Available", clause_title: incomingRegulations?.regulation_title?.htmlToString ?? "Not Available", clause_section: incomingRegulations?.clause_section?.htmlToString ?? "Not Available", clause_details: incomingRegulations?.clause_details?.htmlToString ?? "Not Available", clause_summary: incomingRegulations?.clause_summary?.htmlToString ?? "Not Available", clause_procedure: incomingRegulations?.clause_procedure?.htmlToString ?? "Not Available", clause_form: incomingRegulations?.clause_form?.htmlToString ?? "Not Available", clause_penalty: incomingRegulations?.clause_penalty?.htmlToString ?? "Not Available", sector_id: incomingRegulations?.sector_id?.htmlToString ?? "Not Available", sector_name: incomingRegulations?.sector_name?.htmlToString ?? "Not Available", subject_name: incomingRegulations?.subject_name?.htmlToString ?? "Not Available", date_added: Date(), clause_fee: incomingRegulations?.clause_fee?.htmlToString ?? "Not Available") { (err, res) in
+                if let error = err {
+                    
+                    self.showAlert(title: "Error", message: "There was an error adding the consultation to your favorites. Please contact the administrator.")
+                }
+                else{
+                    self.showAlert(title: "Successful", message: "The Clause has been added to your favorite clauses.")
+                }
+            }
+        }
+        
     }
 
     @IBAction func twitterBtnClicked(_ sender: Any) {

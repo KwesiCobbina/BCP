@@ -58,6 +58,7 @@ extension SearchResultViewController: UITableViewDelegate, UITableViewDataSource
         let selected = searched[indexPath.row]
         AppConstants.sharedInstance.clauseStatus = true
         AppConstants.sharedInstance.selectedsearch = selected
+        AppConstants.sharedInstance.isFromFavs = false
         navigationController?.pushViewController(destinationView, animated: true)
     }
     

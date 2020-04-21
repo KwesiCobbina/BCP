@@ -126,6 +126,7 @@ extension RegulationClausesViewController: UITableViewDelegate, UITableViewDataS
             destinationView.clause = self.datas[indexPath.section]
             AppConstants.sharedInstance.selectedClause = self.datas[indexPath.section]
             AppConstants.sharedInstance.clauseStatus = false
+            AppConstants.sharedInstance.isFromFavs = false
         }
     }
 }

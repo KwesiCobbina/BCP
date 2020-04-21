@@ -27,6 +27,7 @@ class AppConstants {
 	static let sharedInstance = AppConstants()
 	var url: NSURL?
     var clauseStatus: Bool?
+    var isFromFavs: Bool?
     var selectedsearch: SearchResults?
     var regulate: Regulation?
     var policy_id: String?

@@ -54,7 +54,7 @@ class CoreDataManager {
     func isEntityAttributeExist(id: String, entityName: String) -> Bool {
         let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entityName)
-        fetchRequest.predicate = NSPredicate(format: "uid == %@", id)
+        fetchRequest.predicate = NSPredicate(format: "clause_id == %@", id)
 
         let res = try! managedContext.fetch(fetchRequest)
         return res.count > 0 ? true : false
@@ -119,6 +119,10 @@ class CoreDataManager {
                     return
                 }
             }
+            else{
+                let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Already exists"])
+                callback(error, false)
+        }
         }
     
     

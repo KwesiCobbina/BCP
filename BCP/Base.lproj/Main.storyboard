@@ -3365,6 +3365,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="Qc6-a0-wBR" kind="show" id="riq-1g-ojy"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -7006,19 +7009,19 @@
             </objects>
             <point key="canvasLocation" x="-4507" y="3218"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorites View Controller-->
         <scene sceneID="M63-94-PuV">
             <objects>
-                <viewController id="Qc6-a0-wBR" sceneMemberID="viewController">
+                <viewController id="Qc6-a0-wBR" customClass="FavoritesViewController" customModule="BRR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fhK-ua-gFv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sif-zU-2y7">
-                                <rect key="frame" x="5" y="0.0" width="404" height="736"/>
+                                <rect key="frame" x="5" y="0.0" width="404" height="643"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="103" id="lSR-MQ-Oak">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavsTableViewCell" rowHeight="103" id="lSR-MQ-Oak" customClass="FavsTableViewCell" customModule="BRR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="404" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lSR-MQ-Oak" id="ps1-iF-RvM">
@@ -7031,9 +7034,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hp7-GF-JG9">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hp7-GF-JG9">
                                                     <rect key="frame" x="20" y="34" width="364" height="58"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -7048,6 +7051,10 @@
                                                 <constraint firstItem="Hp7-GF-JG9" firstAttribute="leading" secondItem="ps1-iF-RvM" secondAttribute="leadingMargin" id="otT-YT-58m"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailsLbl" destination="Hp7-GF-JG9" id="Pds-hz-zer"/>
+                                            <outlet property="titleLbl" destination="E4u-Cu-l6M" id="uq8-Z2-NRw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -7062,10 +7069,13 @@
                         <viewLayoutGuide key="safeArea" id="2Vb-1B-Mda"/>
                     </view>
                     <navigationItem key="navigationItem" id="N8E-Qh-9Ry"/>
+                    <connections>
+                        <outlet property="favsTableView" destination="sif-zU-2y7" id="ifa-lk-3La"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEm-wB-6ez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5421.739130434783" y="8679.6195652173919"/>
+            <point key="canvasLocation" x="-3013" y="7624"/>
         </scene>
         <!--Clause Details Table View Controller-->
         <scene sceneID="p6H-cx-TKG">
@@ -7083,7 +7093,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZi-bo-Ivy">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="44"/>
                                             <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -7092,6 +7102,15 @@
                                             </state>
                                             <connections>
                                                 <action selector="twitterBtnClicked:" destination="J4n-uL-mDq" eventType="touchUpInside" id="2Y9-j1-3gG"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIC-JM-kX0">
+                                            <rect key="frame" x="207" y="0.0" width="207" height="44"/>
+                                            <color key="backgroundColor" red="0.63529411759999999" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="Favorite" image="heart" catalog="system"/>
+                                            <connections>
+                                                <action selector="favoriteBtnClicked:" destination="J4n-uL-mDq" eventType="touchUpInside" id="lFh-lh-o50"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -7390,6 +7409,7 @@
                         <outlet property="clauseBody" destination="Wne-1v-pvA" id="OjI-lh-tZT"/>
                         <outlet property="clauseSummaryLabel" destination="JMQ-od-eS0" id="3OT-EC-4Nr"/>
                         <outlet property="clauseTableView" destination="bJe-DO-DoE" id="76z-gL-cIj"/>
+                        <outlet property="favBtn" destination="mIC-JM-kX0" id="3Ol-Tn-EKG"/>
                         <outlet property="feeLabel" destination="Et7-lW-fgY" id="i6g-jb-z1l"/>
                         <outlet property="forumTitle" destination="Q9R-tP-B4a" id="dfK-As-ebd"/>
                         <outlet property="penaltyLabel" destination="SSd-Qo-vhl" id="Ucr-Ot-RTo"/>
@@ -7421,7 +7441,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Dou-0c-Yvc"/>
         <segue reference="30N-qc-FM8"/>
-        <segue reference="3nV-Hw-D8H"/>
+        <segue reference="0fL-P4-CQb"/>
         <segue reference="8Bi-1g-u7V"/>
         <segue reference="ONl-db-AKj"/>
     </inferredMetricsTieBreakers>
@@ -7434,6 +7454,7 @@
         <image name="coat_of_arms" width="500" height="500"/>
         <image name="complaint-80" width="80" height="80"/>
         <image name="complaints" width="24" height="24"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="110"/>
         <image name="icon" width="287" height="294"/>

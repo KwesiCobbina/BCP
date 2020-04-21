@@ -96,11 +96,18 @@ class HomedViewController: UIViewController, UITextFieldDelegate {
         let t = "http://bcp.gov.gh/bcp_api/bcp_search_regulations.php?query=\(searchString)"
         guard let url = URL(string: t) else {return}
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(String(describing: response))")
+                return
+            }  
             guard let dataResponse = data,
                 error == nil else {
                     print(error?.localizedDescription ?? "Response Error")
                     return }
+            
             do{
+                
                 
                 let userSearches = try JSONDecoder().decode(Returned.self, from: dataResponse)
                 

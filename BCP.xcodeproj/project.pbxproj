@@ -108,6 +108,8 @@
 		EAEB0FE12270E72800CD1EB5 /* TermsofUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB0FE02270E72800CD1EB5 /* TermsofUseViewController.swift */; };
 		EAEB0FE32270E73700CD1EB5 /* PrivacyStatementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB0FE22270E73700CD1EB5 /* PrivacyStatementViewController.swift */; };
 		EAEB0FE52270E74A00CD1EB5 /* InterestEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB0FE42270E74A00CD1EB5 /* InterestEditTableViewCell.swift */; };
+		EAEBE15A244F8AC6004C44AB /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEBE159244F8AC6004C44AB /* FavoritesViewController.swift */; };
+		EAEBE15C244F8DC7004C44AB /* FavsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEBE15B244F8DC7004C44AB /* FavsTableViewCell.swift */; };
 		EAEED3482272F12D00485411 /* SayDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEED3472272F12D00485411 /* SayDetailsViewController.swift */; };
 		EAF1CD4C22203A200045424D /* FAQsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF1CD4B22203A200045424D /* FAQsViewController.swift */; };
 		EAF6F084229432570082FEB5 /* DocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF6F083229432570082FEB5 /* DocumentTableViewCell.swift */; };
@@ -223,6 +225,8 @@
 		EAEB0FE02270E72800CD1EB5 /* TermsofUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsofUseViewController.swift; sourceTree = "<group>"; };
 		EAEB0FE22270E73700CD1EB5 /* PrivacyStatementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyStatementViewController.swift; sourceTree = "<group>"; };
 		EAEB0FE42270E74A00CD1EB5 /* InterestEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestEditTableViewCell.swift; sourceTree = "<group>"; };
+		EAEBE159244F8AC6004C44AB /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		EAEBE15B244F8DC7004C44AB /* FavsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavsTableViewCell.swift; sourceTree = "<group>"; };
 		EAEED3472272F12D00485411 /* SayDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SayDetailsViewController.swift; sourceTree = "<group>"; };
 		EAEFCB5E224028AA00C88305 /* BCP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BCP.entitlements; sourceTree = "<group>"; };
 		EAF1CD4B22203A200045424D /* FAQsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQsViewController.swift; sourceTree = "<group>"; };
@@ -343,6 +347,8 @@
 				EA762C882440932A001650E2 /* MoreOnRegulationViewController.swift */,
 				EA762C8A24409D7B001650E2 /* ClauseTableViewCell.swift */,
 				EA81D779244B979C00ADCF54 /* ClauseDetailsTableViewController.swift */,
+				EAEBE159244F8AC6004C44AB /* FavoritesViewController.swift */,
+				EAEBE15B244F8DC7004C44AB /* FavsTableViewCell.swift */,
 			);
 			path = New;
 			sourceTree = "<group>";
@@ -664,6 +670,7 @@
 				EA177E6222071BA7005371B0 /* RegulationsViewController.swift in Sources */,
 				EAB1E86424377396007FFD86 /* StatutesAndActsViewController.swift in Sources */,
 				EAC479FF22145E4C009B5630 /* Notifications.swift in Sources */,
+				EAEBE15C244F8DC7004C44AB /* FavsTableViewCell.swift in Sources */,
 				EAEB0FE32270E73700CD1EB5 /* PrivacyStatementViewController.swift in Sources */,
 				EAAD39DE220B2B0500011A53 /* ParticipateViewController.swift in Sources */,
 				EA762C8724401E59001650E2 /* CommentViewController.swift in Sources */,
@@ -701,6 +708,7 @@
 				EAE14BD5223F9E47008A46C8 /* StructsFile.swift in Sources */,
 				48066EE422AD9CEC004A020B /* DownloadedDocuments+CoreDataProperties.swift in Sources */,
 				EA82903F2442366100801F66 /* ForumCommentViewController.swift in Sources */,
+				EAEBE15A244F8AC6004C44AB /* FavoritesViewController.swift in Sources */,
 				EAF1CD4C22203A200045424D /* FAQsViewController.swift in Sources */,
 				EA81E271226B31EF003572D6 /* GeneralViewController.swift in Sources */,
 				EAAD39E6220B2F2D00011A53 /* ClosedConsultationsViewController.swift in Sources */,
