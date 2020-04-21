@@ -38,6 +38,89 @@ class CoreDataManager {
         }
     }
     
+    var clause_id: String?
+    var clause_title: String?
+    var clause_section: String?
+    var clause_details: String?
+    var clause_summary: String?
+    var clause_procedure: String?
+    var clause_form: String?
+    var clause_fee: String?
+    var clause_penalty: String?
+    var sector_id: String?
+    var sector_name: String?
+    var subject_name: String?
+    
+    func isEntityAttributeExist(id: String, entityName: String) -> Bool {
+        let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entityName)
+        fetchRequest.predicate = NSPredicate(format: "uid == %@", id)
+
+        let res = try! managedContext.fetch(fetchRequest)
+        return res.count > 0 ? true : false
+    }
+    
+    func fetchAllClauses(callback: (_ error: NSError?, _ result: [FavoritedClause]?)-> Void) -> Void {
+        let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
+         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "FavoritedClause")
+         do {
+            let consults = try managedContext.fetch(fetchRequest)
+            callback(nil, consults as? [FavoritedClause])
+            return
+         } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+            callback(error, nil)
+            return
+         }
+    }
+    
+    func fetchClause(uid: String, callback: (_ error: NSError?, _ result: FavoritedClause?) -> Void) -> Void{
+            let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "OldConsultations")
+            fetchRequest.predicate = NSPredicate(format: "clause_id == %@" ,uid as String)
+            
+            do {
+                let item = try managedContext.fetch(fetchRequest)
+                for i in item {
+                    callback(nil, (i as? FavoritedClause)!)
+                    return
+                }
+            } catch let error as NSError {
+                callback(error, nil)
+                return
+            }
+        }
+    
+    func saveClause(clause_id: String, clause_title: String, clause_section: String, clause_details: String,clause_summary: String, clause_procedure: String, clause_form: String, clause_penalty: String,sector_id: String, sector_name: String, subject_name: String, date_added: Date, clause_fee: String, callback: (_ error: NSError?, _ result: Bool?) -> Void) -> Void{
+            let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
+            if !isEntityAttributeExist(id: clause_id, entityName: "FavoritedClause") {
+                let clause = FavoritedClause(context: managedContext)
+                clause.clause_id = clause_id
+                clause.clause_details = clause_details
+                clause.clause_fee = clause_fee
+                clause.clause_form = clause_form
+                clause.clause_title = clause_title
+                clause.clause_penalty = clause_penalty
+                clause.clause_section = clause_section
+                clause.sector_id = sector_id
+                clause.date_added = date_added
+                clause.sector_name = sector_name
+                clause.subject_name = subject_name
+                clause.clause_procedure = clause_procedure
+                clause.clause_summary = clause_summary
+                
+                do {
+                    try managedContext.save()
+                    callback(nil, true)
+                    return
+                } catch let error as NSError {
+                    print("Could not fetch. \(error), \(error.userInfo)")
+                    callback(error, false)
+                    return
+                }
+            }
+        }
+    
     
     
     
@@ -124,13 +207,8 @@ class CoreDataManager {
 			/*managedContext.fetch(fetchRequest) will return array of person objects [personObjects]*/
 			let item = try managedContext.fetch(fetchRequest)
 			for i in item {
-				
-				/*call setValue method(aManagedObjectInstance)*/
-				/*here i is managed object instance*/
-//				managedContext.delete(i)
 				i.setValue(name, forKey: "fileName")
 				i.setValue(url, forKey: "fileURL")
-				
 				/*finally save the contexts*/
 				try managedContext.save()
 				

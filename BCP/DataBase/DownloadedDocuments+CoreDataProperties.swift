@@ -22,3 +22,25 @@ extension DownloadedDocuments {
 	@NSManaged public var onlineURL: String?
 
 }
+
+extension FavoritedClause {
+
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<FavoritedClause> {
+        return NSFetchRequest<FavoritedClause>(entityName: "FavoritedClause")
+    }
+
+    @NSManaged public var clause_id: String?
+    @NSManaged public var clause_title: String?
+    @NSManaged public var clause_section: String?
+    @NSManaged public var clause_details: String?
+    @NSManaged public var clause_summary: String?
+    @NSManaged public var clause_procedure: String?
+    @NSManaged public var clause_form: String?
+    @NSManaged public var clause_fee: String?
+    @NSManaged public var clause_penalty: String?
+    @NSManaged public var sector_id: String?
+    @NSManaged public var sector_name: String?
+    @NSManaged public var subject_name: String?
+    @NSManaged public var date_added: Date?
+}
+

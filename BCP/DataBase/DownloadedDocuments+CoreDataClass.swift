@@ -14,3 +14,7 @@ import CoreData
 public class DownloadedDocuments: NSManagedObject {
 
 }
+
+public class FavoritedClause: NSManagedObject{
+    
+}

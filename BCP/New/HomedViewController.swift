@@ -14,6 +14,7 @@ class HomedViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var homedTableView: UITableView!
 
+    let child = SpinnerViewController()
     @IBOutlet weak var searchTextField: DesignableUITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +90,7 @@ class HomedViewController: UIViewController, UITextFieldDelegate {
     }
     
     func fetchSearchResults(searchString: String){
+        showSpinner(child: child)
         var tempsearch: [SearchResults] = []
 //        let t = "http://bcp.gov.gh/bcp_api/bcp_search_regulations.php?query=pharmacy"
         let t = "http://bcp.gov.gh/bcp_api/bcp_search_regulations.php?query=\(searchString)"
@@ -114,6 +116,8 @@ class HomedViewController: UIViewController, UITextFieldDelegate {
                     DispatchQueue.main.async {
                         let secondViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SearchResultViewController") as! SearchResultViewController
                         secondViewController.searched = self.datas
+                        self.hideSpinner(child: self.child)
+                        self.searchTextField.text = ""
                         self.navigationController?.pushViewController(secondViewController, animated: true)
                         }
                 }
@@ -122,6 +126,7 @@ class HomedViewController: UIViewController, UITextFieldDelegate {
                 
             } catch let parsingError {
                 print("Error", parsingError)
+                self.hideSpinner(child: self.child)
             }
         }
         task.resume()
@@ -131,6 +136,7 @@ class HomedViewController: UIViewController, UITextFieldDelegate {
         if segue.identifier == "homeToSearchResult" {
             let searchVC = segue.destination as! SearchResultViewController
             searchVC.searched = datas
+            self.hideSpinner(child: self.child)
         }
         else if segue.identifier == "homedToMore" {
             let consultsDetailView = segue.destination as? MoreDetailsViewController
@@ -154,6 +160,8 @@ class HomedViewController: UIViewController, UITextFieldDelegate {
     @IBAction func searchButtonClicked(_ sender: UIButton) {
         if self.searchTextField.text != "" {
             fetchSearchResults(searchString: self.searchTextField.text!)
+        }else{
+            showAlert(title: "Empty Search Field", message: "The search field cannot be empty.")
         }
         
     }

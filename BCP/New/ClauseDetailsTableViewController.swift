@@ -26,10 +26,25 @@ class ClauseDetailsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if #available(iOS 13.0, *) {
+            let favBtn = UIBarButtonItem(image: UIImage(systemName: "love"), style: .plain, target: self, action: #selector(performClaseSave))
+            favBtn.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            self.navigationController?.navigationItem.rightBarButtonItem = favBtn
+//            self.navigationItem.rightBarButtonItem  = favBtn
+        } else {
+            // Fallback on earlier versions
+            let favBtn = UIBarButtonItem(image: UIImage(named: "love"), style: .plain, target: self, action: #selector(performClaseSave))
+            self.navigationItem.rightBarButtonItem  = favBtn
+        }
         
+        setUpView()
         print(clause)
         clauseTableView.rowHeight = UITableView.automaticDimension
         clauseTableView.estimatedRowHeight = 500
+    }
+    
+    @objc func performClaseSave(){
+        print("saving clause")
     }
     
     func setUpView(){
@@ -48,14 +63,14 @@ class ClauseDetailsTableViewController: UITableViewController {
         } else {
             incomingRegulations = AppConstants.sharedInstance.selectedsearch
             clause = AppConstants.sharedInstance.selectedClause
-            forumTitle.text = incomingRegulation?.regulation_title ?? "Not Available"
-            clauseBody.text = clause?.clause_details?.htmlToString ?? "Not Available"
-            subjectLabel.text = clause?.subject_name ?? "Not Available"
-            sectorLabel.text = clause?.sector_name ?? "Not Available"
-            clauseSummaryLabel.text = clause?.clause_summary ?? "Not Available"
-            penaltyLabel.text = clause?.clause_penalty ?? "Not Available"
-            feeLabel.text = clause?.clause_fee ?? "Not Available"
-            procedureLabel.text = clause?.clause_procedure ?? "Not Available"
+            forumTitle.text = incomingRegulations?.regulation_title ?? "Not Available"
+            clauseBody.text = incomingRegulations?.clause_details?.htmlToString ?? "Not Available"
+            subjectLabel.text = incomingRegulations?.subject_name?.htmlToString ?? "Not Available"
+            sectorLabel.text = incomingRegulations?.sector_name?.htmlToString ?? "Not Available"
+            clauseSummaryLabel.text = incomingRegulations?.clause_summary?.htmlToString ?? "Not Available"
+            penaltyLabel.text = incomingRegulations?.clause_penalty?.htmlToString ?? "Not Available"
+            feeLabel.text = incomingRegulations?.clause_fee?.htmlToString ?? "Not Available"
+            procedureLabel.text = incomingRegulations?.clause_procedure?.htmlToString ?? "Not Available"
             clauseTableView.reloadData()
         }
     }

@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="DownloadedDocuments" representedClassName=".DownloadedDocuments" syncable="YES">
         <attribute name="fileName" optional="YES" attributeType="String"/>
         <attribute name="fileURL" optional="YES" attributeType="String"/>
         <attribute name="onlineURL" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="FavoritedClause" representedClassName=".FavoritedClause" syncable="YES">
+        <attribute name="clause_details" optional="YES" attributeType="String"/>
+        <attribute name="clause_fee" optional="YES" attributeType="String"/>
+        <attribute name="clause_form" optional="YES" attributeType="String"/>
+        <attribute name="clause_id" optional="YES" attributeType="String"/>
+        <attribute name="clause_penalty" optional="YES" attributeType="String"/>
+        <attribute name="clause_procedure" optional="YES" attributeType="String"/>
+        <attribute name="clause_section" optional="YES" attributeType="String"/>
+        <attribute name="clause_summary" optional="YES" attributeType="String"/>
+        <attribute name="clause_title" optional="YES" attributeType="String"/>
+        <attribute name="date_added" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="sector_id" optional="YES" attributeType="String"/>
+        <attribute name="sector_name" optional="YES" attributeType="String"/>
+        <attribute name="subject_name" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="DownloadedDocuments" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="FavoritedClause" positionX="-63" positionY="9" width="128" height="238"/>
     </elements>
 </model>

@@ -24,8 +24,9 @@ class SearchResultTableViewCell: UITableViewCell {
     }
     
     func setSearch(search: SearchResults) {
-        regulationTitle.text = search.regulation_title
-        regulationIntro.text = search.regulation_introduction
+        regulationTitle.text = search.regulation_title?.htmlToString
+        regulationIntro.text = search.regulation_introduction?.htmlToString
+        regulationIntro.numberOfLines = 5
     }
 
 }
