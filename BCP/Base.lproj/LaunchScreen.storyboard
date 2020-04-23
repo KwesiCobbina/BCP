@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="height" constant="200" id="ceC-Dv-9QP"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GHANA BUSINESS REGULATORY REFORMS PORTAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cw-18-nOd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GHANA BUSINESS REGULATORY REFORMS PORTAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cw-18-nOd">
                                 <rect key="frame" x="20" y="399" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="A0M-X1-ebF"/>
@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.69956282380000001" green="0.045145980369999998" blue="0.084189689730000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="BEL-Pl-fHq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="ALN-hR-4HX"/>
                             <constraint firstAttribute="trailing" secondItem="1Cw-18-nOd" secondAttribute="trailing" constant="20" id="gCL-VV-dma"/>

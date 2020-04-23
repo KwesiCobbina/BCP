@@ -27,6 +27,13 @@ class ClauseDetailsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        print(clause)
+        clauseTableView.rowHeight = UITableView.automaticDimension
+        clauseTableView.estimatedRowHeight = 500
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         if AppConstants.sharedInstance.isFromFavs == true{
             favBtn.isHidden = true
         }
@@ -34,9 +41,6 @@ class ClauseDetailsTableViewController: UITableViewController {
             favBtn.isHidden = false
         }
         setUpView()
-        print(clause)
-        clauseTableView.rowHeight = UITableView.automaticDimension
-        clauseTableView.estimatedRowHeight = 500
     }
     
     @objc func performClaseSave(){
